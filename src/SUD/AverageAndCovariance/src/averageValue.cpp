@@ -25,6 +25,6 @@ std::map<std::string, double> averageValue(std::map<std::string, std::vector<Dat
         }
         
     }
-
+    std::cout << "media ok" << std::endl;
     return averages;
 }

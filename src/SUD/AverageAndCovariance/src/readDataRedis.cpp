@@ -26,6 +26,6 @@ bool readDataRedis(redisContext *context, std::vector<std::string> &sensors, std
 
         freeReplyObject(reply);
     }
-
+    std::cout << "read data ok" << std::endl;
     return true;
 }

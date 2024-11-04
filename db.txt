@@ -1,0 +1,101 @@
++---------------------+
+|     dataTable       |
++---------------------+
+| - sensorID: String  |
+| - sampleTime: Int   |
+| - value: Double     |
+| - readTime: Time    |
++---------------------------+
+| PK (sensorID, sampleTime) |
++---------------------------+
+
++------------------------+
+|    averageTable        |
++------------------------+
+| - sensorID: String     |
+| - value: Double        |
+| - firstSampleTime: Int |
+| - lastSampleTime: Int  |
++--------------------------------+
+| PK (sensorID, firstSampleTime) |
++--------------------------------+
+
++------------------------+
+|   covarianceTable      |
++------------------------+
+| - sensorID1: String    |
+| - sensorID2: String    |
+| - value: Double        |
+| - firstSampleTime: Int |
+| - lastSampleTime: Int  |
++--------------------------------------------+
+| PK (sensorID1, sensorID2, firstSampleTime) |
++--------------------------------------------+
+
++---------------------------+
+|   anomalyAverageTable     |
++---------------------------+
+| - sensorID: String        |
+| - firstSampleTime: Int    |
+| - isAnomaly: Boolean      |
+| - value: Double           |
+| - detectionTime: Time     |
+| - deltaTime: Interval     |
+| - exceededTime: Boolean   |
+| - upperThreshold: Double  |
+| - lowerThreshold: Double  |
++---------------------------------------------------+
+| PK (sensorID, firstSampleTime)                    |
+| FK (sensorID, firstSampleTime)                    |
+|REFERENCES averageTable(sensorID, firstSampleTime) |
++---------------------------------------------------+
+
++------------------------------+
+| anomalyCovarianceTable       |
++------------------------------+
+| - sensorID1: String          |
+| - sensorID2: String          |
+| - firstSampleTime: Int       |
+| - isAnomaly: Boolean         |
+| - value: Double              |
+| - detectionTime: Time        |
+| - deltaTime: Interval        |
+| - exceededTime: Boolean      |
+| - threshold: Double          |
++------------------------------------------------------------------+
+| PK (sensorID1, sensorID2, firstSampleTime)                       |
+| FK (sensorID1, sensorID2, firstSampleTime)                       |
+|REFERENCES covarianceTable(sensorID1, sensorID2, firstSampleTime) |
++------------------------------------------------------------------+
+
++---------------------------------------+
+| MonitorAnomalyAverageTable            |
++---------------------------------------+
+| - sensorID: String                    |
+| - firstSampleTime: Int                |
+| - isRight: Boolean                    |
++---------------------------------------------------+
+| FK (sensorID, firstSampleTime)                    |
+|REFERENCES averageTable(sensorID, firstSampleTime) |
++---------------------------------------------------+
+
++-----------------------------------------+
+| MonitorAnomalyCovarianceTable           |
++-----------------------------------------+
+| - sensorID1: String                     |
+| - sensorID2: String                     |
+| - firstSampleTime: Int                  |
+| - isRight: Boolean                      |
++------------------------------------------------------------------+
+| FK (sensorID1, sensorID2, firstSampleTime)                       |
+|REFERENCES covarianceTable(sensorID1, sensorID2, firstSampleTime) |
++------------------------------------------------------------------+
+
++------------------------------+
+|      MonitorLogTable         |
++------------------------------+
+| - ID: Serial                 |
+| - timestamp: Timestamp       |
+| - monitorType: String        |
+| - message: Text              |
++------------------------------+

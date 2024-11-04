@@ -35,6 +35,6 @@ std::vector<std::vector<double>> covarianceValue(std::vector<std::string> &senso
         }
 
     }
-        
+    std::cout << "covarianza ok" << std::endl; 
     return covariances;
 }

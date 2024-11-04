@@ -14,6 +14,6 @@ std::map<std::string, std::vector<Data>> createDataWindow(std::map<std::string, 
             }
         }
     }
-
+    std::cout << "datawindow ok" << std::endl;
     return dataWindow;
 }

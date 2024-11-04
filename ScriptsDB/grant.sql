@@ -1,19 +1,19 @@
 
-\c :dbname postgres
+\c pippi postgres
 
 -- user already exists
-GRANT ALL PRIVILEGES ON DATABASE :dbname to :username ;
+GRANT ALL PRIVILEGES ON DATABASE pippi to mouvzee ;
 
 
-ALTER TABLE dataTable OWNER TO :username ;
-ALTER TABLE averageTable OWNER TO :username ;
-ALTER TABLE covarianceTable OWNER TO :username ;
-ALTER TABLE anomalyAverageTable OWNER TO :username ;
-ALTER TABLE anomalyCovarianceTable OWNER TO :username ;
-ALTER TABLE MonitorMissingDataTable OWNER TO :username ;
+ALTER TABLE dataTable OWNER TO mouvzee ;
+ALTER TABLE averageTable OWNER TO mouvzee ;
+ALTER TABLE covarianceTable OWNER TO mouvzee ;
+ALTER TABLE anomalyAverageTable OWNER TO mouvzee ;
+ALTER TABLE anomalyCovarianceTable OWNER TO mouvzee ;
+ALTER TABLE MonitorLogTable OWNER TO mouvzee ;
 
--- grant all privileges on all tables in schema public to :username ;
--- grant all privileges on all sequences in schema public to :username ;
+-- grant all privileges on all tables in schema public to mouvzee ;
+-- grant all privileges on all sequences in schema public to mouvzee ;
 
-GRANT ALL ON SCHEMA public TO :username ;
-GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO :username ;
+GRANT ALL ON SCHEMA public TO mouvzee ;
+GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO mouvzee ;

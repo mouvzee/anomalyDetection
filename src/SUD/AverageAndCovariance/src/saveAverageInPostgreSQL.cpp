@@ -25,6 +25,6 @@ bool saveAverageInPostgreSQL(std::map<std::string, double> &averages, size_t fir
         
         PQclear(res);
     }
-
+    std::cout << "saving average ok" << std::endl;
     return true;
 }

@@ -1,44 +1,36 @@
-
-#IDIR=../hdr
-#IDIR=../../../con2redis/src
+# Directory di inclusione e oggetti
 IDIR=.
 ODIR=../obj
 BDIR=../bin
 
+# Compilatore e flag
 CC=g++
-# use this when connecting to Postgresql (library lpq)
-#CFLAGS=-std=c++11 -I. -I$(IDIR) -I/usr/include/postgresql -lpq -lm 
-CFLAGS=-std=c++20 -g -ggdb -fpermissive -L/usr/local/lib -Wall -I. -I$(IDIR) -I/usr/include/postgresql -lpq -lm -lhiredis
+CFLAGS=-std=c++20 -g -ggdb -Wall -I. -I$(IDIR) -I/usr/include/postgresql -L/usr/local/lib -lpq -lm -lhiredis
 
-# use this when no connection to Postgresql (library lpq) is needed
-#CFLAGS=-std=c++11 -I. -I$(IDIR) -lm 
-
+# File sorgente, oggetti e dipendenze
 DEPS = $(wildcard $(IDIR)/*.h)
-#OBJ = $(wildcard $(ODIR)/*.o)
 SRC = $(wildcard *.cpp)
 OBJ = $(patsubst %.cpp, $(ODIR)/%.o, $(SRC))
 
-#con2redis_OBJ=$(wildcard ../../../con2redis/obj/*.o)
+# Target principale
+all: $(BDIR)/main
 
-all: $(OBJ) $(BDIR)/main
-
-#all: $(ODIR)/%.o $(BDIR)/main 
-
-#all: $(BDIR)/main
-#con2redis:
-#	$(MAKE) -C ../../../con2redis/src
-
-run:
-	../../delRedisDB.sh
-	../bin/main
-
+# Regola per compilare i file oggetto
 $(ODIR)/%.o: %.cpp $(DEPS)
+	@mkdir -p $(ODIR)  # Crea la directory degli oggetti se non esiste
 	$(CC) -c -o $@ $< $(CFLAGS)
 
-$(BDIR)/main: $(OBJ) $(DEPS)
+# Target per l'eseguibile finale
+$(BDIR)/main: $(OBJ)
+	@mkdir -p $(BDIR)  # Crea la directory bin se non esiste
 	$(CC) -o $@ $(OBJ) $(CFLAGS)
 
+# Target per eseguire il programma
+run: all
+	$(BDIR)/main
+
+# Target per la pulizia
 .PHONY: clean
 
 clean:
-	rm -f $(ODIR)/*.o $(BDIR)/*  *~ $(IDIR)/*~ core 
+	rm -f $(ODIR)/*.o $(BDIR)/* *~ $(IDIR)/*~ core

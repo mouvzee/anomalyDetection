@@ -18,7 +18,7 @@
 #include <tuple>
 
 // Path del file CSV contenente i dati
-#define FILE_NAME_CSV "../Data/data1273117654.csv"
+#define FILE_NAME_CSV "/home/mouvzee/ingegneria/data/data857489168.csv"
 
 // Numero di sensori da leggere
 #define SENSOR 10

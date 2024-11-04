@@ -27,6 +27,6 @@ bool saveCovarianceInPostgreSQL(std::vector<std::vector<double>> &covariances, s
             PQclear(res);
         }
     }
-
+    std::cout << "saving covariance ok" << std::endl;
     return true;
 }

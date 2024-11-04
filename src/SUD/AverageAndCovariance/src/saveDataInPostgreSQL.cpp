@@ -19,6 +19,6 @@ bool saveDataInPostgreSQL(std::map<std::string, std::vector<Data>> &dataVector, 
             PQclear(res);
         }
     }
-
+    std::cout << "save data in db ok" << std::endl;
     return true;
 }

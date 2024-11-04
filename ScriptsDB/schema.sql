@@ -1,7 +1,7 @@
 
 -- database already exists
 
-\c :dbname 
+\c pippi
 
 
 CREATE TABLE IF NOT EXISTS dataTable(
@@ -55,15 +55,6 @@ CREATE TABLE IF NOT EXISTS anomalyCovarianceTable(
         FOREIGN KEY (sensorID1, sensorID2, firstSampleTime) REFERENCES covarianceTable(sensorID1, sensorID2, firstSampleTime)
 );
 
-CREATE TABLE IF NOT EXISTS MonitorMissingDataTable(
-        sensorID VARCHAR(10) NOT NULL,
-        firstSampleTime INT NOT NULL,
-        lastSampleTime INT NOT NULL,
-        nullStreak INT NOT NULL,
-        isAnomaly BOOLEAN,
-        PRIMARY KEY (sensorID, firstSampleTime)
-);
-
 CREATE TABLE IF NOT EXISTS MonitorAnomalyAverageTable(
         sensorID VARCHAR(10) NOT NULL,
         firstSampleTime INT NOT NULL,
@@ -77,4 +68,11 @@ CREATE TABLE IF NOT EXISTS MonitorAnomalyCovarianceTable(
         firstSampleTime INT NOT NULL,
         isRight BOOLEAN,
         FOREIGN KEY (sensorID1, sensorID2, firstSampleTime) REFERENCES covarianceTable(sensorID1, sensorID2, firstSampleTime)
+);
+
+CREATE TABLE IF NOT EXISTS MonitorLogTable(
+        ID SERIAL PRIMARY KEY,
+        timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        monitorType VARCHAR(50) NOT NULL,
+        message TEXT
 );

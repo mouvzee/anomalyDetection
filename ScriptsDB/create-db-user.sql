@@ -2,31 +2,31 @@
 
 -- This creates the database :dbname
 
-drop database if exists :dbname ;
-CREATE DATABASE :dbname ;
+drop database if exists pippi ;
+CREATE DATABASE pippi ;
 
 
 -- This creates the user :username
 
-\c :dbname postgres
+\c pippi postgres
 
 -- erase role if already created
-REASSIGN OWNED BY :username TO postgres ;
-REVOKE ALL PRIVILEGES ON ALL TABLES IN SCHEMA public FROM :username ;
-REVOKE ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA public FROM :username ;
-REVOKE ALL PRIVILEGES ON ALL FUNCTIONS IN SCHEMA public FROM :username ;
-DROP OWNED BY :username;
-DROP USER IF EXISTS :username ;
-CREATE USER :username WITH ENCRYPTED PASSWORD '47002' ;
+REASSIGN OWNED BY mouvzee TO postgres ;
+REVOKE ALL PRIVILEGES ON ALL TABLES IN SCHEMA public FROM mouvzee ;
+REVOKE ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA public FROM mouvzee ;
+REVOKE ALL PRIVILEGES ON ALL FUNCTIONS IN SCHEMA public FROM mouvzee ;
+DROP OWNED BY mouvzee;
+DROP USER IF EXISTS mouvzee ;
+CREATE USER mouvzee WITH ENCRYPTED PASSWORD '13070' ;
 -- user created
 
 
 
-\c :dbname postgres
+\c pippi postgres
 
 -- grant privileges to user
 
-GRANT ALL PRIVILEGES ON DATABASE :dbname to :username ;
+GRANT ALL PRIVILEGES ON DATABASE pippi to mouvzee ;
 
-GRANT ALL ON SCHEMA public TO :username ;
+GRANT ALL ON SCHEMA public TO mouvzee ;
 
