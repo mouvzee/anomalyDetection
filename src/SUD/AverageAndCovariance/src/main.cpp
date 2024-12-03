@@ -13,75 +13,80 @@ int main() {
         }
         return 1;
     }
-    
-    // Lettura chiavi da Redis
-    redisReply *reply_sensors = (redisReply *)redisCommand(context, "KEYS *");
+
+    // debug
     std::cout << "ciao" << std::endl;
-    if (reply_sensors == NULL || reply_sensors->type == REDIS_REPLY_ERROR) {
-        std::cerr << "Errore nel recupero dell'elenco dei sensori da Redis." << std::endl;
-        freeReplyObject(reply_sensors);
+
+
+    // Lettura dati da Redis e creazione vettore di dati
+    std::vector<Data> dataVector;
+    if(!readDataRedis(context, dataVector)) {
         redisFree(context);
         return 1;
     }
-    std::cout << "ciaoòòòòòò" << std::endl;
-    // Creazione struttura dati ordinata di sensori
-    std::vector<std::string> sensors;
-    for (size_t i = 0; i < reply_sensors->elements; i ++) {
-        sensors.push_back(reply_sensors->element[i]->str);
-    }
 
-    std::sort(sensors.begin(), sensors.end(), sensorSorting);
-    freeReplyObject(reply_sensors);
-    std::cout << "ciao-1" << std::endl;
-
-    // Lettura dati da Redis e creazione vettore di dati
-    std::map<std::string, std::vector<Data>> dataVector;
-    if(!readDataRedis(context, sensors, dataVector)){
-        return 1;
-    }
-    std::cout << "ciao0" << std::endl;
-    // Connessione al database PostgreSQL
+    //connessione a prostgres
     PGconn *conn = PQconnectdb("dbname=pippi user=mouvzee password=13070 hostaddr=127.0.0.1 port=5432");
     if (PQstatus(conn) != CONNECTION_OK) {
         std::cerr << "Errore nella connessione a PostgreSQL: " << PQerrorMessage(conn) << std::endl;
         PQfinish(conn);
         return 1;
     }
-    
+
+    std::cout << "connessione db ok." << std::endl;
+
     // Salvataggio dati in PostgreSQL
-    if (!saveDataInPostgreSQL(dataVector, conn)){
+    if (!saveDataOnDB(dataVector, conn)){
         PQfinish(conn);
         return 1;
     }
 
-    // Scorrimento dei dati letti
-    for(size_t i = 0; i<dataVector[sensors[0]].size() - WINDOW_SIZE+1 ; i++){
+    //debug
+    std::cout << "ciao3" << std::endl;
+    std::cout << "dataVector.size(): " << dataVector.size() << std::endl;
 
-        std::map<std::string, std::vector<Data>> dataWindow = createDataWindow(dataVector, i, WINDOW_SIZE + i-1);
-        std::cout << "ciao1" << std::endl;
-        std::map<std::string, double> averages = averageValue(dataWindow);
-        std::cout << "ciao2" << std::endl;
-        std::vector<std::vector<double>> covariances = covarianceValue(sensors, dataWindow, averages);
-        std::cout << "ciao3" << std::endl;
+    //Massimo sampleTime
+    size_t MaxST = std::stoi(dataVector.back().sampleTime);
 
-        if(!saveAverageInPostgreSQL(averages, i, conn)){
+    //Creazione vettori
+    std::vector<std::vector<double>> covariances;
+    std::vector<double> averages;
+    std::map<std::int32_t, std::vector<double>> sensors;
+ 
+    //creazione della finestra temporale
+    for(size_t i = 0; i < MaxST - WINDOW_SIZE + 1 ; i++) {
+
+        //Creazoine della finestra temporale
+        std::vector<Data> dataWindow = createDataWindow(dataVector, i, WINDOW_SIZE + i-1);
+        std::cout << "dataWindow.size(): " << dataWindow.size() << std::endl; //Deb
+        //Creazione della mappa di sensori sulla quale andremo a lavorare
+        createMap(dataWindow, sensors);
+
+        //Calcolo delle medie
+        averages = averageValue(sensors);
+        //Salvataggio delle medie
+        if(!saveAverageOnDB(averages, i, conn)){
             PQfinish(conn);
             return 1;
         }
 
-        std::cout << "ciao4" << std::endl;
-        
-        if(!saveCovarianceInPostgreSQL(covariances, i, conn)){
+        std::cout << "Salvataggio medie ok." << std::endl;
+        //Calcolo delle covarianze
+        covariances = covarianceValue(averages, sensors); 
+        //Salvataggio delle covarianze
+        if(!saveCovarianceOnDB(covariances, i, conn)){
             PQfinish(conn);
             return 1;
         }
 
-        std::cout << "ciao5" << std::endl;
-
-
+        std::cout << "Salvataggio covarianze ok." << std::endl;
     }
 
-    PQfinish(conn);
-    redisFree(context);
-    return 0;
+    //debug
+    std::cout << "ciao4" << std::endl;
+    std::cout << "sensors.size(): " << sensors.size() << std::endl;
+    std::cout << "averages.size(): " << averages.size() << std::endl;
+    std::cout << "covariances.size(): " << covariances.size() << std::endl;
+
+    
 }

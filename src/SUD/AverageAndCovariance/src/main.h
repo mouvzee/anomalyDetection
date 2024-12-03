@@ -19,7 +19,7 @@
 #include <cmath>
 
 // Grandezza della finestra temporale
-#define WINDOW_SIZE 10
+#define WINDOW_SIZE 2
 
 
 // Struttura per i dati letti da Redis
@@ -31,28 +31,27 @@ struct Data {
 
 
 // Legge le stream di dati da Redis e salva il contenuto in un vettore di dati
-bool readDataRedis(redisContext *context, std::vector<std::string> &sensors, std::map<std::string, std::vector<Data>> &dataVector);
+bool readDataRedis(redisContext *context, std::vector<Data> &dataVector);
 
-// Crea una finestra temporale di dati
-std::map<std::string, std::vector<Data>> createDataWindow(std::map<std::string, std::vector<Data>> &dataVector, int wStart, int wEnd);
+//Salva i dati nel database PostgreSQL
+bool saveDataOnDB(std::vector<Data> &dataVector, PGconn *conn);
 
-// Calcola le medie dei dati
-std::map<std::string, double> averageValue(std::map<std::string, std::vector<Data>> &dataWindow);
+//Crea una finestra temporale di dati
+std::vector<Data> createDataWindow(std::vector<Data> &dataVector, int wStart, int wEnd);
 
-// Calcola le covarianze dei dati
-std::vector<std::vector<double>> covarianceValue(std::vector<std::string> &sensors, std::map<std::string, std::vector<Data>> &dataWindow, std::map<std::string, double> &averages);
+//Calcola la media dei valori di una finestra temporale
+std::vector<double> averageValue(const std::map<std::int32_t, std::vector<double>>& sensors);
 
-// Salva i dati in PostgreSQL
-bool saveDataInPostgreSQL(std::map<std::string, std::vector<Data>> &dataVector, PGconn *conn);
+//Crea una mappa con i valori dei sensori
+void createMap(std::vector<Data> dataWindow, std::map<std::int32_t, std::vector<double>> &sensors);
 
-// Salva le medie in PostgreSQL
-bool saveAverageInPostgreSQL(std::map<std::string, double> &averages, size_t firstSampleTime, PGconn *conn);
+//Calcola la covarianza dei valori dei sensori
+std::vector<std::vector<double>> covarianceValue(std::vector<double> averages, std::map<std::int32_t, std::vector<double>> &sensors);
 
-// Salva le covarianze in PostgreSQL
-bool saveCovarianceInPostgreSQL(std::vector<std::vector<double>> &covariances, size_t firstSampleTime, PGconn *conn);
+//Salva la media nel database PostgreSQL
+bool saveAverageOnDB(std::vector<double> averages, size_t firstSampleTime, PGconn *conn);
 
-// Confronta i nomi dei sensori
-bool sensorSorting(const std::string &str1, const std::string &str2);
-
+//Salva la covarianza nel database PostgreSQL
+bool saveCovarianceOnDB(const std::vector<std::vector<double>>& covariances, size_t firstSampleTime, PGconn *conn);
 
 #endif

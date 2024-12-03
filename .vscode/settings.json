@@ -53,5 +53,6 @@
         "streambuf": "cpp",
         "cinttypes": "cpp",
         "typeinfo": "cpp"
-    }
+    },
+    "cmake.sourceDirectory": "/home/mouvzee/ingegneria/andrew/anomalyDetection/prove"
 }

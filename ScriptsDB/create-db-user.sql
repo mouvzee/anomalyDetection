@@ -11,7 +11,7 @@ CREATE DATABASE pippi ;
 \c pippi postgres
 
 -- erase role if already created
-REASSIGN OWNED BY mouvzee TO postgres ;
+REASSIGN OWNED BY postgres TO mouvzee ;
 REVOKE ALL PRIVILEGES ON ALL TABLES IN SCHEMA public FROM mouvzee ;
 REVOKE ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA public FROM mouvzee ;
 REVOKE ALL PRIVILEGES ON ALL FUNCTIONS IN SCHEMA public FROM mouvzee ;

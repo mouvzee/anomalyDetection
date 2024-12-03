@@ -1,30 +1,30 @@
 #include "main.h"
 
-std::map<std::string, double> averageValue(std::map<std::string, std::vector<Data>> &dataWindow){
+std::vector<double> averageValue(const std::map<std::int32_t, std::vector<double>>& sensors) {
+    std::vector<double> averages;  // Vettore per memorizzare le medie
 
-    std::map<std::string, double> averages;
+    // Scorri la mappa
+    for (const auto& [key, values] : sensors) {
+        double sum = 0.0;
+        int validCount = 0;  // Contatore dei valori validi
 
-    // Scorrimento dei dati della finestra temporale
-    for(auto element : dataWindow){
-
-        // Calcolo della media con esclusione dei valori NULL
-        double totalSum = 0;
-        int numberOfValue = 0;
-        for(Data data : element.second){
-            if(data.value != "NULL"){
-                totalSum += std::stod(data.value);
-                numberOfValue++;
+        // Scorri i valori del vettore per ogni chiave
+        for (double value : values) {
+            if (!std::isnan(value)) {
+                sum += value;  // Somma i valori validi
+                validCount++;  // Incrementa il contatore dei valori validi
             }
         }
 
-        // Salvataggio della media
-        if(numberOfValue == 0){
-            averages[element.first] = std::nan("");
-        }else{
-            averages[element.first] = totalSum/numberOfValue;
+        // Calcola la media solo se ci sono valori validi
+        if (validCount > 0) {
+            double average = sum / validCount;  // Media dei valori validi
+            averages.push_back(average);  // Aggiungi la media al vettore
+        } else {
+            // Se tutti i valori sono NaN, aggiungi un valore predefinito (ad esempio, NaN)
+            averages.push_back(std::nan(""));
         }
-        
     }
-    std::cout << "media ok" << std::endl;
-    return averages;
+
+    return averages;  // Restituisci il vettore con le medie
 }

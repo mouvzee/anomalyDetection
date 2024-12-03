@@ -4,7 +4,8 @@
             "name": "Linux",
             "includePath": [
                 "${workspaceFolder}/**",
-                "/usr/include/postgresql"
+                "/usr/include/postgresql",
+                ""
             ],
             "defines": [],
             "compilerPath": "/usr/bin/clang",

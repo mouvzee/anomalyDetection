@@ -25,13 +25,13 @@ int main() {
     // Invio stream di dati a Redis
     for (Data data : dataVector) {
 
-        std::string command = "XADD " + data.sensorID + " * sampleTime " + data.sampleTime + " value " + data.value;
+        std::string command = "XADD mystream * sensorID " + data.sensorID + " sampleTime " + data.sampleTime + " value " + data.value;
         redisReply *reply = (redisReply *)redisCommand(context, command.c_str());
         if (reply == NULL) {
             std::cerr << "Impossibile inviare il command a Redis." << std::endl;
             return 1;
         }
-    
+        std::cout << "Risposta da Redis: " << reply->str << std::endl;
         freeReplyObject(reply);
     }
 

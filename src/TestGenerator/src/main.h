@@ -18,12 +18,12 @@
 #include <tuple>
 
 // Path del file CSV contenente i dati
-#define FILE_NAME_CSV "/home/mouvzee/ingegneria/data/data857489168.csv"
+#define FILE_NAME_CSV "/home/mouvzee/ingegneria/data/datiProva.csv"
 
 // Numero di sensori da leggere
 #define SENSOR 10
 
-// Numero di sampletime da leggere
+// Numero di sampletime da leggere (necessario?)
 #define SAMPLETIME 50
 
 
