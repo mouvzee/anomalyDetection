@@ -2,6 +2,12 @@
 
 void detectAnomaly(std::map<std::string, std::vector<Data>> &dataVector, std::map<std::string, std::vector<Average>> &averages){
 
+    //debug
+    if(dataVector.empty() || averages.empty()){
+    throw std::logic_error("Input dataVector or averages is empty");
+    }
+
+
     // Calcolo della grandezza della finestra temporale e scorrimento sui dati dei sensori
     std::string key = averages.begin()->first;
     int windowSize = averages[key][0].lastSampleTime + 1;
@@ -16,11 +22,27 @@ void detectAnomaly(std::map<std::string, std::vector<Data>> &dataVector, std::ma
             double sensorValue;
             for(int j = i; j < windowSize + i; j++){
 
-                if(sensor.second[j].value == ""){
+                if(j >= sensor.second.size() || i >= averages[sensor.first].size()){
+                    std::cerr << "Invalid index access for sensor " << sensor.first << std::endl;
                     continue;
                 }
 
-                sensorValue = std::stod(sensor.second[j].value);
+
+                if(sensor.second[j].value.empty() || sensor.second[j].value == ""){
+                    std::cerr << "Errore: valore del sensore " << sensor.first << " vuoto alla posizione " << j << std::endl;
+                    continue;
+                }
+
+
+                try {
+                    sensorValue = std::stod(sensor.second[j].value);
+                } catch (const std::invalid_argument& e) {
+                    std::cerr << "Invalid argument in std::stod: " << sensor.second[j].value << std::endl;
+                    continue;
+                } catch (const std::out_of_range& e) {
+                    std::cerr << "Out of range error in std::stod: " << sensor.second[j].value << std::endl;
+                    continue;
+                }
                 deviation += std::pow(sensorValue - average.value, 2);
                 numberOfValues++;
 

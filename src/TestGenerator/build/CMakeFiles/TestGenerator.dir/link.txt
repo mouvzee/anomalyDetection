@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/TestGenerator.dir/src/readFileCSV.cpp.o CMakeFiles/TestGenerator.dir/src/main.cpp.o -o TestGenerator  -lpq -lm -lhiredis 

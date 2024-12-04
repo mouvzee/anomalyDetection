@@ -23,8 +23,8 @@ set(SOURCE_FILES
 add_executable(averageandcovariance ${SOURCE_FILES})
 
 # Aggiungi opzioni di compilazione
-target_compile_options(prova PRIVATE -Wall -g -ggdb)
+target_compile_options(averageandcovariance PRIVATE -Wall -g -ggdb)
 
 # Link alle librerie necessarie
-target_link_libraries(prova PRIVATE pq m hiredis)
+target_link_libraries(averageandcovariance PRIVATE pq m hiredis)
 

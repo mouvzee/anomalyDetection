@@ -1,3 +1,0 @@
-/home/mouvzee/ingegneria/andrew/anomalyDetection/src/TestGenerator/build/CMakeFiles/TestGenerator.dir
-/home/mouvzee/ingegneria/andrew/anomalyDetection/src/TestGenerator/build/CMakeFiles/edit_cache.dir
-/home/mouvzee/ingegneria/andrew/anomalyDetection/src/TestGenerator/build/CMakeFiles/rebuild_cache.dir

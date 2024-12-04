@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/mouvzee/ingegneria/andrew/anomalyDetection/prove
+CMAKE_SOURCE_DIR = /home/mouvzee/ingegneria/anomalyDetection/src/SUD/AverageAndCovariance
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/mouvzee/ingegneria/andrew/anomalyDetection/prove/build
+CMAKE_BINARY_DIR = /home/mouvzee/ingegneria/anomalyDetection/src/SUD/AverageAndCovariance/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mouvzee/ingegneria/andrew/anomalyDetection/prove/build/CMakeFiles /home/mouvzee/ingegneria/andrew/anomalyDetection/prove/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mouvzee/ingegneria/anomalyDetection/src/SUD/AverageAndCovariance/build/CMakeFiles /home/mouvzee/ingegneria/anomalyDetection/src/SUD/AverageAndCovariance/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mouvzee/ingegneria/andrew/anomalyDetection/prove/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mouvzee/ingegneria/anomalyDetection/src/SUD/AverageAndCovariance/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -117,24 +117,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named prova
+# Target rules for targets named averageandcovariance
 
 # Build rule for target.
-prova: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 prova
-.PHONY : prova
+averageandcovariance: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 averageandcovariance
+.PHONY : averageandcovariance
 
 # fast build rule for target.
-prova/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/prova.dir/build.make CMakeFiles/prova.dir/build
-.PHONY : prova/fast
+averageandcovariance/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/averageandcovariance.dir/build.make CMakeFiles/averageandcovariance.dir/build
+.PHONY : averageandcovariance/fast
 
 src/averageValue.o: src/averageValue.cpp.o
 .PHONY : src/averageValue.o
 
 # target to build an object file
 src/averageValue.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/prova.dir/build.make CMakeFiles/prova.dir/src/averageValue.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/averageandcovariance.dir/build.make CMakeFiles/averageandcovariance.dir/src/averageValue.cpp.o
 .PHONY : src/averageValue.cpp.o
 
 src/averageValue.i: src/averageValue.cpp.i
@@ -142,7 +142,7 @@ src/averageValue.i: src/averageValue.cpp.i
 
 # target to preprocess a source file
 src/averageValue.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/prova.dir/build.make CMakeFiles/prova.dir/src/averageValue.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/averageandcovariance.dir/build.make CMakeFiles/averageandcovariance.dir/src/averageValue.cpp.i
 .PHONY : src/averageValue.cpp.i
 
 src/averageValue.s: src/averageValue.cpp.s
@@ -150,7 +150,7 @@ src/averageValue.s: src/averageValue.cpp.s
 
 # target to generate assembly for a file
 src/averageValue.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/prova.dir/build.make CMakeFiles/prova.dir/src/averageValue.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/averageandcovariance.dir/build.make CMakeFiles/averageandcovariance.dir/src/averageValue.cpp.s
 .PHONY : src/averageValue.cpp.s
 
 src/covarianceValue.o: src/covarianceValue.cpp.o
@@ -158,7 +158,7 @@ src/covarianceValue.o: src/covarianceValue.cpp.o
 
 # target to build an object file
 src/covarianceValue.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/prova.dir/build.make CMakeFiles/prova.dir/src/covarianceValue.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/averageandcovariance.dir/build.make CMakeFiles/averageandcovariance.dir/src/covarianceValue.cpp.o
 .PHONY : src/covarianceValue.cpp.o
 
 src/covarianceValue.i: src/covarianceValue.cpp.i
@@ -166,7 +166,7 @@ src/covarianceValue.i: src/covarianceValue.cpp.i
 
 # target to preprocess a source file
 src/covarianceValue.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/prova.dir/build.make CMakeFiles/prova.dir/src/covarianceValue.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/averageandcovariance.dir/build.make CMakeFiles/averageandcovariance.dir/src/covarianceValue.cpp.i
 .PHONY : src/covarianceValue.cpp.i
 
 src/covarianceValue.s: src/covarianceValue.cpp.s
@@ -174,7 +174,7 @@ src/covarianceValue.s: src/covarianceValue.cpp.s
 
 # target to generate assembly for a file
 src/covarianceValue.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/prova.dir/build.make CMakeFiles/prova.dir/src/covarianceValue.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/averageandcovariance.dir/build.make CMakeFiles/averageandcovariance.dir/src/covarianceValue.cpp.s
 .PHONY : src/covarianceValue.cpp.s
 
 src/createDataWindow.o: src/createDataWindow.cpp.o
@@ -182,7 +182,7 @@ src/createDataWindow.o: src/createDataWindow.cpp.o
 
 # target to build an object file
 src/createDataWindow.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/prova.dir/build.make CMakeFiles/prova.dir/src/createDataWindow.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/averageandcovariance.dir/build.make CMakeFiles/averageandcovariance.dir/src/createDataWindow.cpp.o
 .PHONY : src/createDataWindow.cpp.o
 
 src/createDataWindow.i: src/createDataWindow.cpp.i
@@ -190,7 +190,7 @@ src/createDataWindow.i: src/createDataWindow.cpp.i
 
 # target to preprocess a source file
 src/createDataWindow.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/prova.dir/build.make CMakeFiles/prova.dir/src/createDataWindow.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/averageandcovariance.dir/build.make CMakeFiles/averageandcovariance.dir/src/createDataWindow.cpp.i
 .PHONY : src/createDataWindow.cpp.i
 
 src/createDataWindow.s: src/createDataWindow.cpp.s
@@ -198,7 +198,7 @@ src/createDataWindow.s: src/createDataWindow.cpp.s
 
 # target to generate assembly for a file
 src/createDataWindow.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/prova.dir/build.make CMakeFiles/prova.dir/src/createDataWindow.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/averageandcovariance.dir/build.make CMakeFiles/averageandcovariance.dir/src/createDataWindow.cpp.s
 .PHONY : src/createDataWindow.cpp.s
 
 src/createMap.o: src/createMap.cpp.o
@@ -206,7 +206,7 @@ src/createMap.o: src/createMap.cpp.o
 
 # target to build an object file
 src/createMap.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/prova.dir/build.make CMakeFiles/prova.dir/src/createMap.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/averageandcovariance.dir/build.make CMakeFiles/averageandcovariance.dir/src/createMap.cpp.o
 .PHONY : src/createMap.cpp.o
 
 src/createMap.i: src/createMap.cpp.i
@@ -214,7 +214,7 @@ src/createMap.i: src/createMap.cpp.i
 
 # target to preprocess a source file
 src/createMap.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/prova.dir/build.make CMakeFiles/prova.dir/src/createMap.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/averageandcovariance.dir/build.make CMakeFiles/averageandcovariance.dir/src/createMap.cpp.i
 .PHONY : src/createMap.cpp.i
 
 src/createMap.s: src/createMap.cpp.s
@@ -222,7 +222,7 @@ src/createMap.s: src/createMap.cpp.s
 
 # target to generate assembly for a file
 src/createMap.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/prova.dir/build.make CMakeFiles/prova.dir/src/createMap.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/averageandcovariance.dir/build.make CMakeFiles/averageandcovariance.dir/src/createMap.cpp.s
 .PHONY : src/createMap.cpp.s
 
 src/main.o: src/main.cpp.o
@@ -230,7 +230,7 @@ src/main.o: src/main.cpp.o
 
 # target to build an object file
 src/main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/prova.dir/build.make CMakeFiles/prova.dir/src/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/averageandcovariance.dir/build.make CMakeFiles/averageandcovariance.dir/src/main.cpp.o
 .PHONY : src/main.cpp.o
 
 src/main.i: src/main.cpp.i
@@ -238,7 +238,7 @@ src/main.i: src/main.cpp.i
 
 # target to preprocess a source file
 src/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/prova.dir/build.make CMakeFiles/prova.dir/src/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/averageandcovariance.dir/build.make CMakeFiles/averageandcovariance.dir/src/main.cpp.i
 .PHONY : src/main.cpp.i
 
 src/main.s: src/main.cpp.s
@@ -246,7 +246,7 @@ src/main.s: src/main.cpp.s
 
 # target to generate assembly for a file
 src/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/prova.dir/build.make CMakeFiles/prova.dir/src/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/averageandcovariance.dir/build.make CMakeFiles/averageandcovariance.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
 src/readDataRedis.o: src/readDataRedis.cpp.o
@@ -254,7 +254,7 @@ src/readDataRedis.o: src/readDataRedis.cpp.o
 
 # target to build an object file
 src/readDataRedis.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/prova.dir/build.make CMakeFiles/prova.dir/src/readDataRedis.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/averageandcovariance.dir/build.make CMakeFiles/averageandcovariance.dir/src/readDataRedis.cpp.o
 .PHONY : src/readDataRedis.cpp.o
 
 src/readDataRedis.i: src/readDataRedis.cpp.i
@@ -262,7 +262,7 @@ src/readDataRedis.i: src/readDataRedis.cpp.i
 
 # target to preprocess a source file
 src/readDataRedis.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/prova.dir/build.make CMakeFiles/prova.dir/src/readDataRedis.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/averageandcovariance.dir/build.make CMakeFiles/averageandcovariance.dir/src/readDataRedis.cpp.i
 .PHONY : src/readDataRedis.cpp.i
 
 src/readDataRedis.s: src/readDataRedis.cpp.s
@@ -270,7 +270,7 @@ src/readDataRedis.s: src/readDataRedis.cpp.s
 
 # target to generate assembly for a file
 src/readDataRedis.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/prova.dir/build.make CMakeFiles/prova.dir/src/readDataRedis.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/averageandcovariance.dir/build.make CMakeFiles/averageandcovariance.dir/src/readDataRedis.cpp.s
 .PHONY : src/readDataRedis.cpp.s
 
 src/saveAverageOnDB.o: src/saveAverageOnDB.cpp.o
@@ -278,7 +278,7 @@ src/saveAverageOnDB.o: src/saveAverageOnDB.cpp.o
 
 # target to build an object file
 src/saveAverageOnDB.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/prova.dir/build.make CMakeFiles/prova.dir/src/saveAverageOnDB.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/averageandcovariance.dir/build.make CMakeFiles/averageandcovariance.dir/src/saveAverageOnDB.cpp.o
 .PHONY : src/saveAverageOnDB.cpp.o
 
 src/saveAverageOnDB.i: src/saveAverageOnDB.cpp.i
@@ -286,7 +286,7 @@ src/saveAverageOnDB.i: src/saveAverageOnDB.cpp.i
 
 # target to preprocess a source file
 src/saveAverageOnDB.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/prova.dir/build.make CMakeFiles/prova.dir/src/saveAverageOnDB.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/averageandcovariance.dir/build.make CMakeFiles/averageandcovariance.dir/src/saveAverageOnDB.cpp.i
 .PHONY : src/saveAverageOnDB.cpp.i
 
 src/saveAverageOnDB.s: src/saveAverageOnDB.cpp.s
@@ -294,7 +294,7 @@ src/saveAverageOnDB.s: src/saveAverageOnDB.cpp.s
 
 # target to generate assembly for a file
 src/saveAverageOnDB.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/prova.dir/build.make CMakeFiles/prova.dir/src/saveAverageOnDB.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/averageandcovariance.dir/build.make CMakeFiles/averageandcovariance.dir/src/saveAverageOnDB.cpp.s
 .PHONY : src/saveAverageOnDB.cpp.s
 
 src/saveCovarianceOnDB.o: src/saveCovarianceOnDB.cpp.o
@@ -302,7 +302,7 @@ src/saveCovarianceOnDB.o: src/saveCovarianceOnDB.cpp.o
 
 # target to build an object file
 src/saveCovarianceOnDB.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/prova.dir/build.make CMakeFiles/prova.dir/src/saveCovarianceOnDB.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/averageandcovariance.dir/build.make CMakeFiles/averageandcovariance.dir/src/saveCovarianceOnDB.cpp.o
 .PHONY : src/saveCovarianceOnDB.cpp.o
 
 src/saveCovarianceOnDB.i: src/saveCovarianceOnDB.cpp.i
@@ -310,7 +310,7 @@ src/saveCovarianceOnDB.i: src/saveCovarianceOnDB.cpp.i
 
 # target to preprocess a source file
 src/saveCovarianceOnDB.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/prova.dir/build.make CMakeFiles/prova.dir/src/saveCovarianceOnDB.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/averageandcovariance.dir/build.make CMakeFiles/averageandcovariance.dir/src/saveCovarianceOnDB.cpp.i
 .PHONY : src/saveCovarianceOnDB.cpp.i
 
 src/saveCovarianceOnDB.s: src/saveCovarianceOnDB.cpp.s
@@ -318,7 +318,7 @@ src/saveCovarianceOnDB.s: src/saveCovarianceOnDB.cpp.s
 
 # target to generate assembly for a file
 src/saveCovarianceOnDB.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/prova.dir/build.make CMakeFiles/prova.dir/src/saveCovarianceOnDB.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/averageandcovariance.dir/build.make CMakeFiles/averageandcovariance.dir/src/saveCovarianceOnDB.cpp.s
 .PHONY : src/saveCovarianceOnDB.cpp.s
 
 src/saveDataOnDB.o: src/saveDataOnDB.cpp.o
@@ -326,7 +326,7 @@ src/saveDataOnDB.o: src/saveDataOnDB.cpp.o
 
 # target to build an object file
 src/saveDataOnDB.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/prova.dir/build.make CMakeFiles/prova.dir/src/saveDataOnDB.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/averageandcovariance.dir/build.make CMakeFiles/averageandcovariance.dir/src/saveDataOnDB.cpp.o
 .PHONY : src/saveDataOnDB.cpp.o
 
 src/saveDataOnDB.i: src/saveDataOnDB.cpp.i
@@ -334,7 +334,7 @@ src/saveDataOnDB.i: src/saveDataOnDB.cpp.i
 
 # target to preprocess a source file
 src/saveDataOnDB.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/prova.dir/build.make CMakeFiles/prova.dir/src/saveDataOnDB.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/averageandcovariance.dir/build.make CMakeFiles/averageandcovariance.dir/src/saveDataOnDB.cpp.i
 .PHONY : src/saveDataOnDB.cpp.i
 
 src/saveDataOnDB.s: src/saveDataOnDB.cpp.s
@@ -342,7 +342,7 @@ src/saveDataOnDB.s: src/saveDataOnDB.cpp.s
 
 # target to generate assembly for a file
 src/saveDataOnDB.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/prova.dir/build.make CMakeFiles/prova.dir/src/saveDataOnDB.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/averageandcovariance.dir/build.make CMakeFiles/averageandcovariance.dir/src/saveDataOnDB.cpp.s
 .PHONY : src/saveDataOnDB.cpp.s
 
 # Help Target
@@ -353,7 +353,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... prova"
+	@echo "... averageandcovariance"
 	@echo "... src/averageValue.o"
 	@echo "... src/averageValue.i"
 	@echo "... src/averageValue.s"

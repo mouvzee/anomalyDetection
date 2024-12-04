@@ -20,4 +20,3 @@ target_compile_options(TestGenerator PRIVATE -Wall -g -ggdb)
 
 # Link alle librerie necessarie
 target_link_libraries(TestGenerator PRIVATE pq m hiredis)
-

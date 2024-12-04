@@ -1,0 +1,3 @@
+/home/mouvzee/ingegneria/anomalyDetection/src/SUD/AverageAnomalyPresence/build/CMakeFiles/averageanomalypresence.dir
+/home/mouvzee/ingegneria/anomalyDetection/src/SUD/AverageAnomalyPresence/build/CMakeFiles/edit_cache.dir
+/home/mouvzee/ingegneria/anomalyDetection/src/SUD/AverageAnomalyPresence/build/CMakeFiles/rebuild_cache.dir

@@ -18,7 +18,7 @@
 #include <cmath>
 
 // Valore configurabile per rilevazione anomalie
-#define theta 0.5
+#define theta 0.05
 
 // Struttura dati per i valori dei sensori con valore e presenza medie
 struct Data {
