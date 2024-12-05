@@ -11,8 +11,8 @@ int main() {
     }
 
     // Lettura dei dati dal database e creazione e popolazione delle strutture dati per esse
-    std::map<std::string, std::vector<Data>> dataVector;
-    std::map<std::string, std::vector<Average>> averages;
+    std::map<std::int32_t, std::vector<Data>> dataVector;
+    std::map<std::int32_t, std::vector<Average>> averages;
     if(!readDataSQL(dataVector, averages, conn)){
         PQfinish(conn);
         return 1;
@@ -26,6 +26,8 @@ int main() {
         PQfinish(conn);
         return 1;
     }
+
+    std::cout << "Operazione completata con successo" << std::endl;
     
     PQfinish(conn);
     return 0;

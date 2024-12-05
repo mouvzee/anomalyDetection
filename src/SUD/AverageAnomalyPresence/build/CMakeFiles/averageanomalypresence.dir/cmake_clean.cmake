@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/averageanomalypresence.dir/src/checkWindowSize.cpp.o"
+  "CMakeFiles/averageanomalypresence.dir/src/checkWindowSize.cpp.o.d"
   "CMakeFiles/averageanomalypresence.dir/src/detectAnomaly.cpp.o"
   "CMakeFiles/averageanomalypresence.dir/src/detectAnomaly.cpp.o.d"
   "CMakeFiles/averageanomalypresence.dir/src/main.cpp.o"

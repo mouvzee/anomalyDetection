@@ -1,6 +1,6 @@
 #include "main.h"
 
-bool readDataSQL(std::map<std::string, std::vector<Data>> &dataVector, std::map<std::string, std::vector<Average>> &averages, PGconn *conn){
+bool readDataSQL(std::map<std::int32_t, std::vector<Data>> &dataVector, std::map<std::int32_t, std::vector<Average>> &averages, PGconn *conn){
 
     // Selezione dei sensorID
     std::string query = "SELECT DISTINCT sensorID FROM datatable;";
@@ -33,7 +33,12 @@ bool readDataSQL(std::map<std::string, std::vector<Data>> &dataVector, std::map<
             data.sensorID = sensorID;
             data.sampleTime = PQgetvalue(resSensorData, j, 0);
             data.value = PQgetvalue(resSensorData, j, 1);
-            dataVector[sensorID].push_back(data);
+            data.isAverageAnomaly = false;
+            data.averageAnomalyValue = std::nan("");
+            data.upperThreshold = std::nan("");
+            data.lowerThreshold = std::nan("");
+            int SID = std::stoi(sensorID);
+            dataVector[SID].push_back(data);
 
         }
 
@@ -67,7 +72,7 @@ bool readDataSQL(std::map<std::string, std::vector<Data>> &dataVector, std::map<
 
         }
 
-        averages[sensorID] = averageVector;
+        averages[std::stoi(sensorID)] = averageVector;
         PQclear(resSensorData);
     }
 

@@ -1,6 +1,6 @@
 #include "main.h"
 
-bool saveAnomalySQL(std::map<std::string, std::vector<Average>> &averages, std::map<std::string, std::vector<Data>> &dataVector, PGconn *conn){
+bool saveAnomalySQL(std::map<std::int32_t, std::vector<Average>> &averages, std::map<std::int32_t, std::vector<Data>> &dataVector, PGconn *conn){
 
     // Scorrimento dei valori delle medie
     for(auto element : averages){
@@ -11,7 +11,7 @@ bool saveAnomalySQL(std::map<std::string, std::vector<Average>> &averages, std::
             std::string upperThreshold = std::isnan(dataVector[element.first][average.lastSampleTime].upperThreshold) ? "NULL" : std::to_string(dataVector[element.first][average.lastSampleTime].upperThreshold);
             std::string lowerThreshold = std::isnan(dataVector[element.first][average.lastSampleTime].lowerThreshold) ? "NULL" : std::to_string(dataVector[element.first][average.lastSampleTime].lowerThreshold);
             std::string query = "INSERT INTO anomalyAverageTable (sensorID, firstSampleTime, isAnomaly, upperThreshold, lowerThreshold) VALUES ('"+ average.sensorID 
-                    + "', " + std::to_string(average.firstSampleTime) + ", " + isAnomaly + ", " + upperThreshold + ", " + lowerThreshold + ")";
+                    + "', " + std::to_string(average.firstSampleTime) + ", " + isAnomaly + ", " + upperThreshold + ", " + lowerThreshold + ");";
         
             PGresult *res = PQexec(conn, query.c_str());
             if (PQresultStatus(res) != PGRES_COMMAND_OK) {

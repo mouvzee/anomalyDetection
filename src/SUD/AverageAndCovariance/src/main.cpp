@@ -54,7 +54,7 @@ int main() {
     std::map<std::int32_t, std::vector<double>> sensors;
  
     //creazione della finestra temporale
-    for(size_t i = 0; i < MaxST - WINDOW_SIZE + 1 ; i++) {
+    for(size_t i = 0; i <= MaxST - WINDOW_SIZE + 1 ; i++) {
 
         //Creazoine della finestra temporale
         std::vector<Data> dataWindow = createDataWindow(dataVector, i, WINDOW_SIZE + i-1);

@@ -129,6 +129,30 @@ averageanomalypresence/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/averageanomalypresence.dir/build.make CMakeFiles/averageanomalypresence.dir/build
 .PHONY : averageanomalypresence/fast
 
+src/checkWindowSize.o: src/checkWindowSize.cpp.o
+.PHONY : src/checkWindowSize.o
+
+# target to build an object file
+src/checkWindowSize.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/averageanomalypresence.dir/build.make CMakeFiles/averageanomalypresence.dir/src/checkWindowSize.cpp.o
+.PHONY : src/checkWindowSize.cpp.o
+
+src/checkWindowSize.i: src/checkWindowSize.cpp.i
+.PHONY : src/checkWindowSize.i
+
+# target to preprocess a source file
+src/checkWindowSize.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/averageanomalypresence.dir/build.make CMakeFiles/averageanomalypresence.dir/src/checkWindowSize.cpp.i
+.PHONY : src/checkWindowSize.cpp.i
+
+src/checkWindowSize.s: src/checkWindowSize.cpp.s
+.PHONY : src/checkWindowSize.s
+
+# target to generate assembly for a file
+src/checkWindowSize.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/averageanomalypresence.dir/build.make CMakeFiles/averageanomalypresence.dir/src/checkWindowSize.cpp.s
+.PHONY : src/checkWindowSize.cpp.s
+
 src/detectAnomaly.o: src/detectAnomaly.cpp.o
 .PHONY : src/detectAnomaly.o
 
@@ -234,6 +258,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... averageanomalypresence"
+	@echo "... src/checkWindowSize.o"
+	@echo "... src/checkWindowSize.i"
+	@echo "... src/checkWindowSize.s"
 	@echo "... src/detectAnomaly.o"
 	@echo "... src/detectAnomaly.i"
 	@echo "... src/detectAnomaly.s"

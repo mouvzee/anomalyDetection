@@ -40,13 +40,13 @@ struct Average {
 };
 
 // Legge i dati da un database SQL e li salva nelle strutture dati
-bool readDataSQL(std::map<std::string, std::vector<Data>> &dataVector, std::map<std::string, std::vector<Average>> &averages, PGconn *conn);
+bool readDataSQL(std::map<std::int32_t, std::vector<Data>> &dataVector, std::map<std::int32_t, std::vector<Average>> &averages, PGconn *conn);
 
 // Calcola la presenza delle anomalie nelle medie
-void detectAnomaly(std::map<std::string, std::vector<Data>> &dataVector, std::map<std::string, std::vector<Average>> &averages);
+void detectAnomaly(std::map<std::int32_t, std::vector<Data>> &dataVector, std::map<std::int32_t, std::vector<Average>> &averages);
 
 // Salva i dati calcolati nel database SQL
-bool saveAnomalySQL(std::map<std::string, std::vector<Average>> &averages, std::map<std::string, std::vector<Data>> &dataVector, PGconn *conn);
+bool saveAnomalySQL(std::map<std::int32_t, std::vector<Average>> &averages, std::map<std::int32_t, std::vector<Data>> &dataVector, PGconn *conn);
 
 
 #endif

@@ -1,6 +1,6 @@
 #include "main.h"
 
-void detectAnomaly(std::map<std::string, std::vector<Data>> &dataVector, std::map<std::string, std::vector<Average>> &averages){
+void detectAnomaly(std::map<std::int32_t, std::vector<Data>> &dataVector, std::map<std::int32_t, std::vector<Average>> &averages){
 
     //debug
     if(dataVector.empty() || averages.empty()){
@@ -9,9 +9,9 @@ void detectAnomaly(std::map<std::string, std::vector<Data>> &dataVector, std::ma
 
 
     // Calcolo della grandezza della finestra temporale e scorrimento sui dati dei sensori
-    std::string key = averages.begin()->first;
-    int windowSize = averages[key][0].lastSampleTime + 1;
-    for(auto sensor : dataVector){
+    std::int32_t key = averages.begin()->first;
+    size_t windowSize = averages[key][0].lastSampleTime + 1;
+    for(auto& sensor : dataVector){
         for(size_t i = 0; i<sensor.second.size() - windowSize + 1; i++){
 
             int numberOfValues = 0;
@@ -29,20 +29,12 @@ void detectAnomaly(std::map<std::string, std::vector<Data>> &dataVector, std::ma
 
 
                 if(sensor.second[j].value.empty() || sensor.second[j].value == ""){
-                    std::cerr << "Errore: valore del sensore " << sensor.first << " vuoto alla posizione " << j << std::endl;
+                    //std::cerr << "Valore del sensore " << sensor.first << " ignorato alla posizione " << j << std::endl;
                     continue;
                 }
 
-
-                try {
-                    sensorValue = std::stod(sensor.second[j].value);
-                } catch (const std::invalid_argument& e) {
-                    std::cerr << "Invalid argument in std::stod: " << sensor.second[j].value << std::endl;
-                    continue;
-                } catch (const std::out_of_range& e) {
-                    std::cerr << "Out of range error in std::stod: " << sensor.second[j].value << std::endl;
-                    continue;
-                }
+                sensorValue = std::stod(sensor.second[j].value);
+                
                 deviation += std::pow(sensorValue - average.value, 2);
                 numberOfValues++;
 
