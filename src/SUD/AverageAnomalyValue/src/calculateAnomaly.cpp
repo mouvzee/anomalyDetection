@@ -1,9 +1,9 @@
 #include "main.h"
 
-void calculateAnomaly(std::map<std::string, std::vector<Data>> &dataVector, std::map<std::string, std::vector<Average>> &averages){
+void calculateAnomaly(std::map<std::int32_t, std::vector<Data>> &dataVector, std::map<std::int32_t, std::vector<Average>> &averages){
 
     // Calcolo della grandezza della finestra temporale e scorrimento sul vettore di dati
-    std::string key = averages.begin()->first;
+    std::int32_t key = averages.begin()->first;
     int windowSize = averages[key][0].lastSampleTime + 1;
     for(auto sensor : dataVector){
         for(size_t i = 0; i < sensor.second.size() - windowSize + 1; i++){

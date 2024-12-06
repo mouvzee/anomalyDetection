@@ -1,22 +1,24 @@
 #include "main.h"
 
-bool readDataSQL(std::map<std::string, std::vector<Data>> &dataVector, std::map<std::string, std::vector<Average>> &averages, PGconn *conn){
+bool readDataSQL(std::map<std::int32_t, std::vector<Data>> &dataVector, std::map<std::int32_t, std::vector<Average>> &averages, PGconn *conn){
 
     // Selezione dei sensorID
-    std::string query = "SELECT DISTINCT sensorID FROM datatable;";
+    std::string query = "SELECT DISTINCT sensorID FROM dataTable;";
+    std::cout << "Esecuzione della query: " << query << std::endl;
     PGresult *resSensorsID = PQexec(conn, query.c_str());
+    std::cout << "Numero di sensorID trovati: " << PQntuples(resSensorsID) << std::endl;
     if (PQresultStatus(resSensorsID) != PGRES_TUPLES_OK) {
         std::cerr << "Errore nell'esecuzione della select su dataTable dei sensorID: " << PQresultErrorMessage(resSensorsID) << std::endl;
         PQclear(resSensorsID);
         return false;
     }
 
-    // Scorrimento sul numero di sensorID
+    // Scorrimento dei sensorID
     for (int i = 0; i <PQntuples(resSensorsID); i++) {
 
         std::string sensorID = PQgetvalue(resSensorsID, i, 0);
 
-        // Selezione dei dati dello specifico sensore
+        // Selezione dei dati dello specifico sensorID
         query = "SELECT sampleTime, value FROM dataTable WHERE sensorID = '" + sensorID + "'";
         PGresult *resSensorData = PQexec(conn, query.c_str());
         if (PQresultStatus(resSensorData) != PGRES_TUPLES_OK) {
@@ -26,20 +28,22 @@ bool readDataSQL(std::map<std::string, std::vector<Data>> &dataVector, std::map<
             return false;
         }
 
-        // Scorrimento dei dati del sensore e popolazione struttura dati per essi
+        // Scorrimento dei valori del sensorID e salvataggio nella struttura dati
         for (int j = 0; j <PQntuples(resSensorData); j++) {
-
+            
             Data data;
             data.sensorID = sensorID;
             data.sampleTime = PQgetvalue(resSensorData, j, 0);
             data.value = PQgetvalue(resSensorData, j, 1);
-            dataVector[sensorID].push_back(data);
+            data.averageAnomalyValue = std::nan("");
+            int SID = std::stoi(sensorID);
+            dataVector[SID].push_back(data);
 
         }
 
         PQclear(resSensorData);
 
-        // Query per la selezione del valore delle medie
+        // Selezione dei valori dalla tabella delle medie
         query = "SELECT value, firstSampleTime, lastSampleTime FROM averageTable WHERE sensorID = '" + sensorID + "'";
         resSensorData = PQexec(conn, query.c_str());
         if (PQresultStatus(resSensorData) != PGRES_TUPLES_OK) {
@@ -49,27 +53,25 @@ bool readDataSQL(std::map<std::string, std::vector<Data>> &dataVector, std::map<
             return false;
         }
 
-        // Scorrimento sul valore delle medie e creazione e popolazione della struttura dati per esse
+        // Scorrimento dei valori delle medie e creazione e salvataggio nella struttura dati
         std::vector<Average> averageVector;
         for(int j = 0; j < PQntuples(resSensorData); j++){
             
             Average average;
             average.sensorID = sensorID;
-
-            std::string value = PQgetvalue(resSensorData, j, 0);
-            if(value == ""){
+            std::string check = PQgetvalue(resSensorData, j, 0);
+            if(check == ""){
                 average.value = std::nan("");
             }else{
-                average.value = std::stod(value);
+                average.value = std::stod(check);
             }
-
             average.firstSampleTime = std::stoi(PQgetvalue(resSensorData, j, 1));
             average.lastSampleTime = std::stoi(PQgetvalue(resSensorData, j, 2));
             averageVector.push_back(average);
 
         }
 
-        averages[sensorID] = averageVector;
+        averages[std::stoi(sensorID)] = averageVector;
         PQclear(resSensorData);
     }
 

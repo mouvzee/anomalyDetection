@@ -1,0 +1,12 @@
+/home/mouvzee/ingegneria/anomalyDetection/build/CMakeFiles/run_all.dir
+/home/mouvzee/ingegneria/anomalyDetection/build/CMakeFiles/edit_cache.dir
+/home/mouvzee/ingegneria/anomalyDetection/build/CMakeFiles/rebuild_cache.dir
+/home/mouvzee/ingegneria/anomalyDetection/build/src/TestGenerator/CMakeFiles/TestGenerator.dir
+/home/mouvzee/ingegneria/anomalyDetection/build/src/TestGenerator/CMakeFiles/edit_cache.dir
+/home/mouvzee/ingegneria/anomalyDetection/build/src/TestGenerator/CMakeFiles/rebuild_cache.dir
+/home/mouvzee/ingegneria/anomalyDetection/build/src/SUD/AverageAndCovariance/CMakeFiles/averageandcovariance.dir
+/home/mouvzee/ingegneria/anomalyDetection/build/src/SUD/AverageAndCovariance/CMakeFiles/edit_cache.dir
+/home/mouvzee/ingegneria/anomalyDetection/build/src/SUD/AverageAndCovariance/CMakeFiles/rebuild_cache.dir
+/home/mouvzee/ingegneria/anomalyDetection/build/src/SUD/AverageAnomalyPresence/CMakeFiles/averageanomalypresence.dir
+/home/mouvzee/ingegneria/anomalyDetection/build/src/SUD/AverageAnomalyPresence/CMakeFiles/edit_cache.dir
+/home/mouvzee/ingegneria/anomalyDetection/build/src/SUD/AverageAnomalyPresence/CMakeFiles/rebuild_cache.dir

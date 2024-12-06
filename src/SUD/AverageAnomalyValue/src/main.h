@@ -26,7 +26,6 @@ struct Data {
     std::string value;
     std::string sampleTime;
     double averageAnomalyValue;
-    bool isAverageAnomaly;
 };
 
 // Struttura per i dati delle medie
@@ -38,13 +37,13 @@ struct Average {
 };
 
 // Legge da un database SQL e popola le strutture dati
-bool readDataSQL(std::map<std::string, std::vector<Data>> &dataVector, std::map<std::string, std::vector<Average>> &averages, PGconn *conn);
+bool readDataSQL(std::map<std::int32_t, std::vector<Data>> &dataVector, std::map<std::int32_t, std::vector<Average>> &averages, PGconn *conn);
 
 // Calcola il valore dell'anomalia delle medie
-void calculateAnomaly(std::map<std::string, std::vector<Data>> &dataVector, std::map<std::string, std::vector<Average>> &averages);
+void calculateAnomaly(std::map<std::int32_t, std::vector<Data>> &dataVector, std::map<std::int32_t, std::vector<Average>> &averages);
 
 // Salva il valore delle anomalie nel database
-bool saveAnomalySQL(std::map<std::string, std::vector<Data>> &dataVector, int windowSize, PGconn *conn);
+bool saveAnomalySQL(std::map<std::int32_t, std::vector<Data>> &dataVector, int windowSize, PGconn *conn);
 
 
 #endif

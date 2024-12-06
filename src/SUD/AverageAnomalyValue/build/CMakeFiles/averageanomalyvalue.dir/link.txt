@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/averageanomalyvalue.dir/src/main.cpp.o CMakeFiles/averageanomalyvalue.dir/src/readDataSQL.cpp.o CMakeFiles/averageanomalyvalue.dir/src/calculateAnomaly.cpp.o CMakeFiles/averageanomalyvalue.dir/src/saveAnomalySQL.cpp.o -o averageanomalyvalue  -lpq -lm -lhiredis 
