@@ -43,11 +43,10 @@ std::vector<Data> createDataWindow(std::vector<Data> &dataVector, int wStart, in
 std::vector<double> averageValue(const std::map<std::int32_t, std::vector<double>>& sensors);
 
 //Crea una mappa con i valori dei sensori
-void createMap(std::vector<Data> dataWindow, std::map<std::int32_t, std::vector<double>> &sensors);
+std::map<std::int32_t, std::vector<double>> createMap(std::vector<Data> dataWindow);
 
 //Calcola la covarianza dei valori dei sensori
-std::vector<std::vector<double>> covarianceValue(std::vector<double> averages, std::map<std::int32_t, std::vector<double>> &sensors);
-
+std::vector<std::vector<double>> covarianceValue(const std::vector<double>& averages, std::map<std::int32_t, std::vector<double>> &sensors);
 //Salva la media nel database PostgreSQL
 bool saveAverageOnDB(std::vector<double> averages, size_t firstSampleTime, PGconn *conn);
 

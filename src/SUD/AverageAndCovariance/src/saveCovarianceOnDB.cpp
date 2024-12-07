@@ -18,7 +18,7 @@ bool saveCovarianceOnDB(const std::vector<std::vector<double>>& covariances, siz
                 query += "ON CONFLICT (sensorID1, sensorID2, firstSampleTime) DO NOTHING;";
                 
                 // Debug della query
-                std::cout << "Executing batch query: " << query << std::endl;
+                //std::cout << "Executing batch query: " << query << std::endl;
 
                 PGresult *res = PQexec(conn, query.c_str());
                 if (PQresultStatus(res) != PGRES_COMMAND_OK) {
@@ -38,7 +38,7 @@ bool saveCovarianceOnDB(const std::vector<std::vector<double>>& covariances, siz
         query += "ON CONFLICT (sensorID1, sensorID2, firstSampleTime) DO NOTHING;";
         
         // Debug della query
-        std::cout << "Executing final batch query: " << query << std::endl;
+        //std::cout << "Executing final batch query: " << query << std::endl;
 
         PGresult *res = PQexec(conn, query.c_str());
         if (PQresultStatus(res) != PGRES_COMMAND_OK) {

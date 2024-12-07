@@ -48,22 +48,19 @@ int main() {
     //Massimo sampleTime
     size_t MaxST = std::stoi(dataVector.back().sampleTime);
 
-    //Creazione vettori
-    std::vector<std::vector<double>> covariances;
-    std::vector<double> averages;
-    std::map<std::int32_t, std::vector<double>> sensors;
  
     //creazione della finestra temporale
     for(size_t i = 0; i <= MaxST - WINDOW_SIZE + 1 ; i++) {
 
         //Creazoine della finestra temporale
         std::vector<Data> dataWindow = createDataWindow(dataVector, i, WINDOW_SIZE + i-1);
-        std::cout << "dataWindow.size(): " << dataWindow.size() << std::endl; //Deb
+
         //Creazione della mappa di sensori sulla quale andremo a lavorare
-        createMap(dataWindow, sensors);
+        std::map<std::int32_t, std::vector<double>> sensors = createMap(dataWindow);
 
         //Calcolo delle medie
-        averages = averageValue(sensors);
+        std::vector<double> averages = averageValue(sensors);
+
         //Salvataggio delle medie
         if(!saveAverageOnDB(averages, i, conn)){
             PQfinish(conn);
@@ -71,8 +68,10 @@ int main() {
         }
 
         std::cout << "Salvataggio medie ok." << std::endl;
+
         //Calcolo delle covarianze
-        covariances = covarianceValue(averages, sensors); 
+        std::vector<std::vector<double>> covariances = covarianceValue(averages, sensors);
+        
         //Salvataggio delle covarianze
         if(!saveCovarianceOnDB(covariances, i, conn)){
             PQfinish(conn);
@@ -84,9 +83,6 @@ int main() {
 
     //debug
     std::cout << "ciao4" << std::endl;
-    std::cout << "sensors.size(): " << sensors.size() << std::endl;
-    std::cout << "averages.size(): " << averages.size() << std::endl;
-    std::cout << "covariances.size(): " << covariances.size() << std::endl;
 
     
 }

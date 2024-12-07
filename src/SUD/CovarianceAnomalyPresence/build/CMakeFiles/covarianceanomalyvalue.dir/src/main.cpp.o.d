@@ -1,7 +1,7 @@
-src/SUD/AverageAndCovariance/CMakeFiles/averageandcovariance.dir/src/createMap.cpp.o: \
- /home/mouvzee/ingegneria/anomalyDetection/src/SUD/AverageAndCovariance/src/createMap.cpp \
+CMakeFiles/covarianceanomalyvalue.dir/src/main.cpp.o: \
+ /home/mouvzee/ingegneria/anomalyDetection/src/SUD/CovarianceAnomalyPresence/src/main.cpp \
  /usr/include/stdc-predef.h \
- /home/mouvzee/ingegneria/anomalyDetection/src/SUD/AverageAndCovariance/src/main.h \
+ /home/mouvzee/ingegneria/anomalyDetection/src/SUD/CovarianceAnomalyPresence/src/main.h \
  /usr/include/c++/11/iostream \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -204,10 +204,7 @@ src/SUD/AverageAndCovariance/CMakeFiles/averageandcovariance.dir/src/createMap.c
  /usr/include/c++/11/tr1/poly_laguerre.tcc \
  /usr/include/c++/11/tr1/riemann_zeta.tcc /usr/include/c++/11/set \
  /usr/include/c++/11/bits/stl_tree.h /usr/include/c++/11/bits/stl_set.h \
- /usr/include/c++/11/bits/stl_multiset.h /usr/include/hiredis/hiredis.h \
- /usr/include/hiredis/read.h /usr/include/x86_64-linux-gnu/sys/time.h \
- /usr/include/hiredis/sds.h /usr/include/hiredis/alloc.h \
- /usr/include/c++/11/stdlib.h /usr/include/c++/11/map \
+ /usr/include/c++/11/bits/stl_multiset.h /usr/include/c++/11/map \
  /usr/include/c++/11/bits/stl_map.h \
  /usr/include/c++/11/bits/stl_multimap.h \
  /usr/include/postgresql/libpq-fe.h \
