@@ -1,29 +1,44 @@
+# File principale CMakeLists.txt
 cmake_minimum_required(VERSION 3.16)
-project(MonitorSelector)
+project(MonitorsSelector)
 
-# Opzione per scegliere quale monitor eseguire
+# Opzione per selezionare quale monitor eseguire
 set(DEFAULT_MONITOR "checkaverage" CACHE STRING "Seleziona il monitor da eseguire: checkaverage, checkcovariance, checknumber")
 
-# Elenca gli eseguibili disponibili
+# Elenca i monitor disponibili
 set(MONITOR_EXECUTABLES
     "checkaverage"
     "checkcovariance"
     "checknumber"
 )
 
-# Controlla che il monitor selezionato sia valido
+# Controlla se il monitor selezionato è valido
 list(FIND MONITOR_EXECUTABLES ${DEFAULT_MONITOR} MONITOR_INDEX)
 if(MONITOR_INDEX EQUAL -1)
-    message(FATAL_ERROR "Monitor non valido selezionato: ${DEFAULT_MONITOR}. Valori possibili: ${MONITOR_EXECUTABLES}")
+    message(FATAL_ERROR "Monitor selezionato non valido: ${DEFAULT_MONITOR}. Scegli tra: ${MONITOR_EXECUTABLES}")
 endif()
 
-# Aggiungi i sottoprogetti dei monitor (assicurati che i CMakeLists.txt di ogni cartella generino un eseguibile con lo stesso nome della directory)
-add_subdirectory(Functional/CheckAverage)
-add_subdirectory(Functional/CheckCovariance)
-add_subdirectory(Functional/CheckNumber)
-
-# Crea un target personalizzato per eseguire il monitor selezionato
-add_custom_target(run_selected_monitor
-    COMMAND ${CMAKE_BINARY_DIR}/${DEFAULT_MONITOR}/${DEFAULT_MONITOR}
-    COMMENT "Esecuzione del monitor selezionato: ${DEFAULT_MONITOR}"
+# Mappa tra eseguibili e directory
+set(MONITOR_TO_DIRECTORY_MAP
+    "checkaverage" "CheckAverage"
+    "checkcovariance" "CheckCovariance"
+    "checknumber" "CheckNumber"
 )
+
+# Trova la directory corrispondente al monitor selezionato
+list(FIND MONITOR_TO_DIRECTORY_MAP ${DEFAULT_MONITOR} MONITOR_INDEX)
+math(EXPR MONITOR_DIR_INDEX "${MONITOR_INDEX} + 1")
+list(GET MONITOR_TO_DIRECTORY_MAP ${MONITOR_DIR_INDEX} MONITOR_DIRECTORY)
+
+# Aggiungi sottodirectory per il monitor selezionato
+add_subdirectory(${MONITOR_DIRECTORY})
+
+# Configura l'obiettivo principale
+add_custom_target(run_monitor ALL DEPENDS ${DEFAULT_MONITOR})
+
+# Comando per eseguire il monitor selezionato
+add_custom_command(TARGET run_monitor POST_BUILD
+    COMMAND ${CMAKE_BINARY_DIR}/${MONITOR_DIRECTORY}/${DEFAULT_MONITOR}
+    COMMENT "Eseguendo il monitor selezionato: ${DEFAULT_MONITOR}"
+)
+

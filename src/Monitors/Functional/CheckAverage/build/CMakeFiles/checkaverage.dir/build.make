@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/mouvzee/ingegneria/anomalyDetection/src/Monitors/Functional/CheckAverageAnomalies
+CMAKE_SOURCE_DIR = /home/mouvzee/ingegneria/anomalyDetection/src/Monitors/Functional/CheckAverage
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/mouvzee/ingegneria/anomalyDetection/src/Monitors/Functional/CheckAverageAnomalies/build
+CMAKE_BINARY_DIR = /home/mouvzee/ingegneria/anomalyDetection/src/Monitors/Functional/CheckAverage/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/checkaverage.dir/depend.make
@@ -72,30 +72,30 @@ include CMakeFiles/checkaverage.dir/flags.make
 CMakeFiles/checkaverage.dir/src/main.cpp.o: CMakeFiles/checkaverage.dir/flags.make
 CMakeFiles/checkaverage.dir/src/main.cpp.o: ../src/main.cpp
 CMakeFiles/checkaverage.dir/src/main.cpp.o: CMakeFiles/checkaverage.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mouvzee/ingegneria/anomalyDetection/src/Monitors/Functional/CheckAverageAnomalies/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/checkaverage.dir/src/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/checkaverage.dir/src/main.cpp.o -MF CMakeFiles/checkaverage.dir/src/main.cpp.o.d -o CMakeFiles/checkaverage.dir/src/main.cpp.o -c /home/mouvzee/ingegneria/anomalyDetection/src/Monitors/Functional/CheckAverageAnomalies/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mouvzee/ingegneria/anomalyDetection/src/Monitors/Functional/CheckAverage/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/checkaverage.dir/src/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/checkaverage.dir/src/main.cpp.o -MF CMakeFiles/checkaverage.dir/src/main.cpp.o.d -o CMakeFiles/checkaverage.dir/src/main.cpp.o -c /home/mouvzee/ingegneria/anomalyDetection/src/Monitors/Functional/CheckAverage/src/main.cpp
 
 CMakeFiles/checkaverage.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/checkaverage.dir/src/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mouvzee/ingegneria/anomalyDetection/src/Monitors/Functional/CheckAverageAnomalies/src/main.cpp > CMakeFiles/checkaverage.dir/src/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mouvzee/ingegneria/anomalyDetection/src/Monitors/Functional/CheckAverage/src/main.cpp > CMakeFiles/checkaverage.dir/src/main.cpp.i
 
 CMakeFiles/checkaverage.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/checkaverage.dir/src/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mouvzee/ingegneria/anomalyDetection/src/Monitors/Functional/CheckAverageAnomalies/src/main.cpp -o CMakeFiles/checkaverage.dir/src/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mouvzee/ingegneria/anomalyDetection/src/Monitors/Functional/CheckAverage/src/main.cpp -o CMakeFiles/checkaverage.dir/src/main.cpp.s
 
 CMakeFiles/checkaverage.dir/src/averageAnomalyMonitor.cpp.o: CMakeFiles/checkaverage.dir/flags.make
 CMakeFiles/checkaverage.dir/src/averageAnomalyMonitor.cpp.o: ../src/averageAnomalyMonitor.cpp
 CMakeFiles/checkaverage.dir/src/averageAnomalyMonitor.cpp.o: CMakeFiles/checkaverage.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mouvzee/ingegneria/anomalyDetection/src/Monitors/Functional/CheckAverageAnomalies/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/checkaverage.dir/src/averageAnomalyMonitor.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/checkaverage.dir/src/averageAnomalyMonitor.cpp.o -MF CMakeFiles/checkaverage.dir/src/averageAnomalyMonitor.cpp.o.d -o CMakeFiles/checkaverage.dir/src/averageAnomalyMonitor.cpp.o -c /home/mouvzee/ingegneria/anomalyDetection/src/Monitors/Functional/CheckAverageAnomalies/src/averageAnomalyMonitor.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mouvzee/ingegneria/anomalyDetection/src/Monitors/Functional/CheckAverage/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/checkaverage.dir/src/averageAnomalyMonitor.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/checkaverage.dir/src/averageAnomalyMonitor.cpp.o -MF CMakeFiles/checkaverage.dir/src/averageAnomalyMonitor.cpp.o.d -o CMakeFiles/checkaverage.dir/src/averageAnomalyMonitor.cpp.o -c /home/mouvzee/ingegneria/anomalyDetection/src/Monitors/Functional/CheckAverage/src/averageAnomalyMonitor.cpp
 
 CMakeFiles/checkaverage.dir/src/averageAnomalyMonitor.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/checkaverage.dir/src/averageAnomalyMonitor.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mouvzee/ingegneria/anomalyDetection/src/Monitors/Functional/CheckAverageAnomalies/src/averageAnomalyMonitor.cpp > CMakeFiles/checkaverage.dir/src/averageAnomalyMonitor.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mouvzee/ingegneria/anomalyDetection/src/Monitors/Functional/CheckAverage/src/averageAnomalyMonitor.cpp > CMakeFiles/checkaverage.dir/src/averageAnomalyMonitor.cpp.i
 
 CMakeFiles/checkaverage.dir/src/averageAnomalyMonitor.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/checkaverage.dir/src/averageAnomalyMonitor.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mouvzee/ingegneria/anomalyDetection/src/Monitors/Functional/CheckAverageAnomalies/src/averageAnomalyMonitor.cpp -o CMakeFiles/checkaverage.dir/src/averageAnomalyMonitor.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mouvzee/ingegneria/anomalyDetection/src/Monitors/Functional/CheckAverage/src/averageAnomalyMonitor.cpp -o CMakeFiles/checkaverage.dir/src/averageAnomalyMonitor.cpp.s
 
 # Object files for target checkaverage
 checkaverage_OBJECTS = \
@@ -109,7 +109,7 @@ checkaverage: CMakeFiles/checkaverage.dir/src/main.cpp.o
 checkaverage: CMakeFiles/checkaverage.dir/src/averageAnomalyMonitor.cpp.o
 checkaverage: CMakeFiles/checkaverage.dir/build.make
 checkaverage: CMakeFiles/checkaverage.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/mouvzee/ingegneria/anomalyDetection/src/Monitors/Functional/CheckAverageAnomalies/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable checkaverage"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/mouvzee/ingegneria/anomalyDetection/src/Monitors/Functional/CheckAverage/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable checkaverage"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/checkaverage.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -121,6 +121,6 @@ CMakeFiles/checkaverage.dir/clean:
 .PHONY : CMakeFiles/checkaverage.dir/clean
 
 CMakeFiles/checkaverage.dir/depend:
-	cd /home/mouvzee/ingegneria/anomalyDetection/src/Monitors/Functional/CheckAverageAnomalies/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/mouvzee/ingegneria/anomalyDetection/src/Monitors/Functional/CheckAverageAnomalies /home/mouvzee/ingegneria/anomalyDetection/src/Monitors/Functional/CheckAverageAnomalies /home/mouvzee/ingegneria/anomalyDetection/src/Monitors/Functional/CheckAverageAnomalies/build /home/mouvzee/ingegneria/anomalyDetection/src/Monitors/Functional/CheckAverageAnomalies/build /home/mouvzee/ingegneria/anomalyDetection/src/Monitors/Functional/CheckAverageAnomalies/build/CMakeFiles/checkaverage.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/mouvzee/ingegneria/anomalyDetection/src/Monitors/Functional/CheckAverage/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/mouvzee/ingegneria/anomalyDetection/src/Monitors/Functional/CheckAverage /home/mouvzee/ingegneria/anomalyDetection/src/Monitors/Functional/CheckAverage /home/mouvzee/ingegneria/anomalyDetection/src/Monitors/Functional/CheckAverage/build /home/mouvzee/ingegneria/anomalyDetection/src/Monitors/Functional/CheckAverage/build /home/mouvzee/ingegneria/anomalyDetection/src/Monitors/Functional/CheckAverage/build/CMakeFiles/checkaverage.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/checkaverage.dir/depend
 

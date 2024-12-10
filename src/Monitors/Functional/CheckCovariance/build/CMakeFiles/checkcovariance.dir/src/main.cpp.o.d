@@ -1,7 +1,7 @@
 CMakeFiles/checkcovariance.dir/src/main.cpp.o: \
- /home/mouvzee/ingegneria/anomalyDetection/src/Monitors/Functional/CheckCovAnomalies/src/main.cpp \
+ /home/mouvzee/ingegneria/anomalyDetection/src/Monitors/Functional/CheckCovariance/src/main.cpp \
  /usr/include/stdc-predef.h \
- /home/mouvzee/ingegneria/anomalyDetection/src/Monitors/Functional/CheckCovAnomalies/src/main.h \
+ /home/mouvzee/ingegneria/anomalyDetection/src/Monitors/Functional/CheckCovariance/src/main.h \
  /usr/include/c++/11/iostream \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \

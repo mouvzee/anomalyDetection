@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/checkaverageanomalies.dir/src/main.cpp.o CMakeFiles/checkaverageanomalies.dir/src/averageAnomalyMonitor.cpp.o -o checkaverageanomalies  -lpq -lm -lhiredis 

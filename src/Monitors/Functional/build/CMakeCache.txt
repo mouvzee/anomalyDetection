@@ -145,7 +145,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=MonitorSelector
+CMAKE_PROJECT_NAME:STATIC=MonitorsSelector
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/usr/bin/ranlib
@@ -211,16 +211,43 @@ CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
 //Seleziona il monitor da eseguire: checkaverage, checkcovariance,
 // checknumber
-DEFAULT_MONITOR:STRING=checkaverage
+DEFAULT_MONITOR:STRING=checknumber
 
 //Value Computed by CMake
-MonitorSelector_BINARY_DIR:STATIC=/home/mouvzee/ingegneria/anomalyDetection/src/Monitors/Functional/build
+MonitorsSelector_BINARY_DIR:STATIC=/home/mouvzee/ingegneria/anomalyDetection/src/Monitors/Functional/build
 
 //Value Computed by CMake
-MonitorSelector_IS_TOP_LEVEL:STATIC=ON
+MonitorsSelector_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
-MonitorSelector_SOURCE_DIR:STATIC=/home/mouvzee/ingegneria/anomalyDetection/src/Monitors/Functional
+MonitorsSelector_SOURCE_DIR:STATIC=/home/mouvzee/ingegneria/anomalyDetection/src/Monitors/Functional
+
+//Value Computed by CMake
+checkaverage_BINARY_DIR:STATIC=/home/mouvzee/ingegneria/anomalyDetection/src/Monitors/Functional/build/CheckAverage
+
+//Value Computed by CMake
+checkaverage_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+checkaverage_SOURCE_DIR:STATIC=/home/mouvzee/ingegneria/anomalyDetection/src/Monitors/Functional/CheckAverage
+
+//Value Computed by CMake
+checkcovariance_BINARY_DIR:STATIC=/home/mouvzee/ingegneria/anomalyDetection/src/Monitors/Functional/build/CheckCovariance
+
+//Value Computed by CMake
+checkcovariance_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+checkcovariance_SOURCE_DIR:STATIC=/home/mouvzee/ingegneria/anomalyDetection/src/Monitors/Functional/CheckCovariance
+
+//Value Computed by CMake
+checknumber_BINARY_DIR:STATIC=/home/mouvzee/ingegneria/anomalyDetection/src/Monitors/Functional/build/CheckNumber
+
+//Value Computed by CMake
+checknumber_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+checknumber_SOURCE_DIR:STATIC=/home/mouvzee/ingegneria/anomalyDetection/src/Monitors/Functional/CheckNumber
 
 
 ########################
@@ -327,7 +354,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=1
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=2
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

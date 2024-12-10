@@ -54,10 +54,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/mouvzee/ingegneria/anomalyDetection/src/Monitors/Functional/CheckCovAnomalies
+CMAKE_SOURCE_DIR = /home/mouvzee/ingegneria/anomalyDetection/src/Monitors/Functional/CheckCovariance
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/mouvzee/ingegneria/anomalyDetection/src/Monitors/Functional/CheckCovAnomalies/build
+CMAKE_BINARY_DIR = /home/mouvzee/ingegneria/anomalyDetection/src/Monitors/Functional/CheckCovariance/build
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -81,14 +81,14 @@ clean: CMakeFiles/checkcovariance.dir/clean
 CMakeFiles/checkcovariance.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/checkcovariance.dir/build.make CMakeFiles/checkcovariance.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/checkcovariance.dir/build.make CMakeFiles/checkcovariance.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mouvzee/ingegneria/anomalyDetection/src/Monitors/Functional/CheckCovAnomalies/build/CMakeFiles --progress-num=1,2,3 "Built target checkcovariance"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mouvzee/ingegneria/anomalyDetection/src/Monitors/Functional/CheckCovariance/build/CMakeFiles --progress-num=1,2,3 "Built target checkcovariance"
 .PHONY : CMakeFiles/checkcovariance.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/checkcovariance.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mouvzee/ingegneria/anomalyDetection/src/Monitors/Functional/CheckCovAnomalies/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mouvzee/ingegneria/anomalyDetection/src/Monitors/Functional/CheckCovariance/build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/checkcovariance.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mouvzee/ingegneria/anomalyDetection/src/Monitors/Functional/CheckCovAnomalies/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mouvzee/ingegneria/anomalyDetection/src/Monitors/Functional/CheckCovariance/build/CMakeFiles 0
 .PHONY : CMakeFiles/checkcovariance.dir/rule
 
 # Convenience name for target.

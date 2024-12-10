@@ -8,8 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/mouvzee/ingegneria/anomalyDetection/src/Monitors/Functional/CheckAverageAnomalies/src/averageAnomalyMonitor.cpp" "CMakeFiles/checkaverage.dir/src/averageAnomalyMonitor.cpp.o" "gcc" "CMakeFiles/checkaverage.dir/src/averageAnomalyMonitor.cpp.o.d"
-  "/home/mouvzee/ingegneria/anomalyDetection/src/Monitors/Functional/CheckAverageAnomalies/src/main.cpp" "CMakeFiles/checkaverage.dir/src/main.cpp.o" "gcc" "CMakeFiles/checkaverage.dir/src/main.cpp.o.d"
+  "/home/mouvzee/ingegneria/anomalyDetection/src/Monitors/Functional/CheckAverage/src/averageAnomalyMonitor.cpp" "CMakeFiles/checkaverage.dir/src/averageAnomalyMonitor.cpp.o" "gcc" "CMakeFiles/checkaverage.dir/src/averageAnomalyMonitor.cpp.o.d"
+  "/home/mouvzee/ingegneria/anomalyDetection/src/Monitors/Functional/CheckAverage/src/main.cpp" "CMakeFiles/checkaverage.dir/src/main.cpp.o" "gcc" "CMakeFiles/checkaverage.dir/src/main.cpp.o.d"
   )
 
 # Targets to which this target links.

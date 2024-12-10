@@ -20,3 +20,4 @@ target_compile_options(checkaverage PRIVATE -Wall -g -ggdb)
 
 # Link alle librerie necessarie
 target_link_libraries(checkaverage PRIVATE pq m hiredis)
+

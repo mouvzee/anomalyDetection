@@ -1,4 +1,4 @@
-# Install script for directory: /home/mouvzee/ingegneria/anomalyDetection/src/Monitors/Functional/CheckAverageAnomalies
+# Install script for directory: /home/mouvzee/ingegneria/anomalyDetection/src/Monitors/Functional/CheckAverage
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/mouvzee/ingegneria/anomalyDetection/src/Monitors/Functional/CheckAverageAnomalies/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/mouvzee/ingegneria/anomalyDetection/src/Monitors/Functional/CheckAverage/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

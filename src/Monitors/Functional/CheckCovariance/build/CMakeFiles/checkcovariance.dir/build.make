@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/mouvzee/ingegneria/anomalyDetection/src/Monitors/Functional/CheckCovAnomalies
+CMAKE_SOURCE_DIR = /home/mouvzee/ingegneria/anomalyDetection/src/Monitors/Functional/CheckCovariance
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/mouvzee/ingegneria/anomalyDetection/src/Monitors/Functional/CheckCovAnomalies/build
+CMAKE_BINARY_DIR = /home/mouvzee/ingegneria/anomalyDetection/src/Monitors/Functional/CheckCovariance/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/checkcovariance.dir/depend.make
@@ -72,30 +72,30 @@ include CMakeFiles/checkcovariance.dir/flags.make
 CMakeFiles/checkcovariance.dir/src/main.cpp.o: CMakeFiles/checkcovariance.dir/flags.make
 CMakeFiles/checkcovariance.dir/src/main.cpp.o: ../src/main.cpp
 CMakeFiles/checkcovariance.dir/src/main.cpp.o: CMakeFiles/checkcovariance.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mouvzee/ingegneria/anomalyDetection/src/Monitors/Functional/CheckCovAnomalies/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/checkcovariance.dir/src/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/checkcovariance.dir/src/main.cpp.o -MF CMakeFiles/checkcovariance.dir/src/main.cpp.o.d -o CMakeFiles/checkcovariance.dir/src/main.cpp.o -c /home/mouvzee/ingegneria/anomalyDetection/src/Monitors/Functional/CheckCovAnomalies/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mouvzee/ingegneria/anomalyDetection/src/Monitors/Functional/CheckCovariance/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/checkcovariance.dir/src/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/checkcovariance.dir/src/main.cpp.o -MF CMakeFiles/checkcovariance.dir/src/main.cpp.o.d -o CMakeFiles/checkcovariance.dir/src/main.cpp.o -c /home/mouvzee/ingegneria/anomalyDetection/src/Monitors/Functional/CheckCovariance/src/main.cpp
 
 CMakeFiles/checkcovariance.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/checkcovariance.dir/src/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mouvzee/ingegneria/anomalyDetection/src/Monitors/Functional/CheckCovAnomalies/src/main.cpp > CMakeFiles/checkcovariance.dir/src/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mouvzee/ingegneria/anomalyDetection/src/Monitors/Functional/CheckCovariance/src/main.cpp > CMakeFiles/checkcovariance.dir/src/main.cpp.i
 
 CMakeFiles/checkcovariance.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/checkcovariance.dir/src/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mouvzee/ingegneria/anomalyDetection/src/Monitors/Functional/CheckCovAnomalies/src/main.cpp -o CMakeFiles/checkcovariance.dir/src/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mouvzee/ingegneria/anomalyDetection/src/Monitors/Functional/CheckCovariance/src/main.cpp -o CMakeFiles/checkcovariance.dir/src/main.cpp.s
 
 CMakeFiles/checkcovariance.dir/src/covarianceAnomalyMonitor.cpp.o: CMakeFiles/checkcovariance.dir/flags.make
 CMakeFiles/checkcovariance.dir/src/covarianceAnomalyMonitor.cpp.o: ../src/covarianceAnomalyMonitor.cpp
 CMakeFiles/checkcovariance.dir/src/covarianceAnomalyMonitor.cpp.o: CMakeFiles/checkcovariance.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mouvzee/ingegneria/anomalyDetection/src/Monitors/Functional/CheckCovAnomalies/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/checkcovariance.dir/src/covarianceAnomalyMonitor.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/checkcovariance.dir/src/covarianceAnomalyMonitor.cpp.o -MF CMakeFiles/checkcovariance.dir/src/covarianceAnomalyMonitor.cpp.o.d -o CMakeFiles/checkcovariance.dir/src/covarianceAnomalyMonitor.cpp.o -c /home/mouvzee/ingegneria/anomalyDetection/src/Monitors/Functional/CheckCovAnomalies/src/covarianceAnomalyMonitor.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mouvzee/ingegneria/anomalyDetection/src/Monitors/Functional/CheckCovariance/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/checkcovariance.dir/src/covarianceAnomalyMonitor.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/checkcovariance.dir/src/covarianceAnomalyMonitor.cpp.o -MF CMakeFiles/checkcovariance.dir/src/covarianceAnomalyMonitor.cpp.o.d -o CMakeFiles/checkcovariance.dir/src/covarianceAnomalyMonitor.cpp.o -c /home/mouvzee/ingegneria/anomalyDetection/src/Monitors/Functional/CheckCovariance/src/covarianceAnomalyMonitor.cpp
 
 CMakeFiles/checkcovariance.dir/src/covarianceAnomalyMonitor.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/checkcovariance.dir/src/covarianceAnomalyMonitor.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mouvzee/ingegneria/anomalyDetection/src/Monitors/Functional/CheckCovAnomalies/src/covarianceAnomalyMonitor.cpp > CMakeFiles/checkcovariance.dir/src/covarianceAnomalyMonitor.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mouvzee/ingegneria/anomalyDetection/src/Monitors/Functional/CheckCovariance/src/covarianceAnomalyMonitor.cpp > CMakeFiles/checkcovariance.dir/src/covarianceAnomalyMonitor.cpp.i
 
 CMakeFiles/checkcovariance.dir/src/covarianceAnomalyMonitor.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/checkcovariance.dir/src/covarianceAnomalyMonitor.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mouvzee/ingegneria/anomalyDetection/src/Monitors/Functional/CheckCovAnomalies/src/covarianceAnomalyMonitor.cpp -o CMakeFiles/checkcovariance.dir/src/covarianceAnomalyMonitor.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mouvzee/ingegneria/anomalyDetection/src/Monitors/Functional/CheckCovariance/src/covarianceAnomalyMonitor.cpp -o CMakeFiles/checkcovariance.dir/src/covarianceAnomalyMonitor.cpp.s
 
 # Object files for target checkcovariance
 checkcovariance_OBJECTS = \
@@ -109,7 +109,7 @@ checkcovariance: CMakeFiles/checkcovariance.dir/src/main.cpp.o
 checkcovariance: CMakeFiles/checkcovariance.dir/src/covarianceAnomalyMonitor.cpp.o
 checkcovariance: CMakeFiles/checkcovariance.dir/build.make
 checkcovariance: CMakeFiles/checkcovariance.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/mouvzee/ingegneria/anomalyDetection/src/Monitors/Functional/CheckCovAnomalies/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable checkcovariance"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/mouvzee/ingegneria/anomalyDetection/src/Monitors/Functional/CheckCovariance/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable checkcovariance"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/checkcovariance.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -121,6 +121,6 @@ CMakeFiles/checkcovariance.dir/clean:
 .PHONY : CMakeFiles/checkcovariance.dir/clean
 
 CMakeFiles/checkcovariance.dir/depend:
-	cd /home/mouvzee/ingegneria/anomalyDetection/src/Monitors/Functional/CheckCovAnomalies/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/mouvzee/ingegneria/anomalyDetection/src/Monitors/Functional/CheckCovAnomalies /home/mouvzee/ingegneria/anomalyDetection/src/Monitors/Functional/CheckCovAnomalies /home/mouvzee/ingegneria/anomalyDetection/src/Monitors/Functional/CheckCovAnomalies/build /home/mouvzee/ingegneria/anomalyDetection/src/Monitors/Functional/CheckCovAnomalies/build /home/mouvzee/ingegneria/anomalyDetection/src/Monitors/Functional/CheckCovAnomalies/build/CMakeFiles/checkcovariance.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/mouvzee/ingegneria/anomalyDetection/src/Monitors/Functional/CheckCovariance/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/mouvzee/ingegneria/anomalyDetection/src/Monitors/Functional/CheckCovariance /home/mouvzee/ingegneria/anomalyDetection/src/Monitors/Functional/CheckCovariance /home/mouvzee/ingegneria/anomalyDetection/src/Monitors/Functional/CheckCovariance/build /home/mouvzee/ingegneria/anomalyDetection/src/Monitors/Functional/CheckCovariance/build /home/mouvzee/ingegneria/anomalyDetection/src/Monitors/Functional/CheckCovariance/build/CMakeFiles/checkcovariance.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/checkcovariance.dir/depend
 
