@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/covariancedetectiontime.dir/src/main.cpp.o CMakeFiles/covariancedetectiontime.dir/src/updateDataSQL.cpp.o -o covariancedetectiontime  -lpq -lm -lhiredis 

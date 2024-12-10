@@ -1,0 +1,6 @@
+/home/mouvzee/ingegneria/anomalyDetection/src/Monitors/NonFunctional/build/CMakeFiles/run_monitor.dir
+/home/mouvzee/ingegneria/anomalyDetection/src/Monitors/NonFunctional/build/CMakeFiles/edit_cache.dir
+/home/mouvzee/ingegneria/anomalyDetection/src/Monitors/NonFunctional/build/CMakeFiles/rebuild_cache.dir
+/home/mouvzee/ingegneria/anomalyDetection/src/Monitors/NonFunctional/build/CovarianceAnomalyTime/CMakeFiles/covarianceanomalytime.dir
+/home/mouvzee/ingegneria/anomalyDetection/src/Monitors/NonFunctional/build/CovarianceAnomalyTime/CMakeFiles/edit_cache.dir
+/home/mouvzee/ingegneria/anomalyDetection/src/Monitors/NonFunctional/build/CovarianceAnomalyTime/CMakeFiles/rebuild_cache.dir
