@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/covarianceanomalypresence.dir/src/main.cpp.o CMakeFiles/covarianceanomalypresence.dir/src/detectAnomaly.cpp.o CMakeFiles/covarianceanomalypresence.dir/src/updateDataSQL.cpp.o -o covarianceanomalypresence  -lpq -lm -lhiredis 

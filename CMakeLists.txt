@@ -12,6 +12,10 @@ add_subdirectory(src/TestGenerator)
 add_subdirectory(src/SUD/AverageAndCovariance)
 add_subdirectory(src/SUD/AverageAnomalyPresence)
 add_subdirectory(src/SUD/AverageAnomalyValue)
+add_subdirectory(src/SUD/CovarianceAnomalyPresence)
+add_subdirectory(src/SUD/CovarianceAnomalyValue)
+add_subdirectory(ScriptsDB)
+
 
 # Comandi personalizzati per eseguire gli eseguibili
 add_custom_target(run_all
@@ -19,11 +23,18 @@ add_custom_target(run_all
     COMMAND ${CMAKE_BINARY_DIR}/src/SUD/AverageAndCovariance/averageandcovariance
     COMMAND ${CMAKE_BINARY_DIR}/src/SUD/AverageAnomalyPresence/averageanomalypresence
     COMMAND ${CMAKE_BINARY_DIR}/src/SUD/AverageAnomalyValue/averageanomalyvalue
+    COMMAND ${CMAKE_BINARY_DIR}/src/SUD/CovarianceAnomalyPresence/covarianceanomalypresence
+    COMMAND ${CMAKE_BINARY_DIR}/src/SUD/CovarianceAnomalyValue/covarianceanomalyvalue
     DEPENDS
         TestGenerator
         averageandcovariance
         averageanomalypresence
         averageanomalyvalue
+        covarianceanomalypresence
+        covarianceanomalyvalue
     COMMENT "Esecuzione di tutti gli eseguibili"
 )
+
+
+
 

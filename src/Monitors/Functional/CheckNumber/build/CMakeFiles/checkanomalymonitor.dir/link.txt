@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/checkanomalymonitor.dir/src/main.cpp.o CMakeFiles/checkanomalymonitor.dir/src/numberAnomalyMonitor.cpp.o -o checkanomalymonitor  -lpq -lm -lhiredis 

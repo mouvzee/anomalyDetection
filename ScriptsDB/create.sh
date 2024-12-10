@@ -14,6 +14,13 @@
 
 
 # This does all
-cd ../ScriptsDB
-sudo -u postgres psql postgres -f parameters.sql -f create-db-user.sql  -f schema.sql  -f grant.sql
-cd ../src
+
+# Definisce il percorso assoluto di ScriptsDB
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+
+# Esegue gli script SQL usando il percorso assoluto
+sudo -u postgres psql postgres \
+  -f "$SCRIPT_DIR/parameters.sql" \
+  -f "$SCRIPT_DIR/create-db-user.sql" \
+  -f "$SCRIPT_DIR/schema.sql" \
+  -f "$SCRIPT_DIR/grant.sql"

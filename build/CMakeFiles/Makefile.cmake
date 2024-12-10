@@ -8,10 +8,14 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
   "../CMakeLists.txt"
+  "../ScriptsDB/CMakeLists.txt"
   "CMakeFiles/3.22.1/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.22.1/CMakeSystem.cmake"
   "../src/SUD/AverageAndCovariance/CMakeLists.txt"
   "../src/SUD/AverageAnomalyPresence/CMakeLists.txt"
+  "../src/SUD/AverageAnomalyValue/CMakeLists.txt"
+  "../src/SUD/CovarianceAnomalyPresence/CMakeLists.txt"
+  "../src/SUD/CovarianceAnomalyValue/CMakeLists.txt"
   "../src/TestGenerator/CMakeLists.txt"
   "/usr/share/cmake-3.22/Modules/CMakeCXXInformation.cmake"
   "/usr/share/cmake-3.22/Modules/CMakeCommonLanguageInclude.cmake"
@@ -41,6 +45,10 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "src/TestGenerator/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/SUD/AverageAndCovariance/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/SUD/AverageAnomalyPresence/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "src/SUD/AverageAnomalyValue/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "src/SUD/CovarianceAnomalyPresence/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "src/SUD/CovarianceAnomalyValue/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "ScriptsDB/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -49,4 +57,8 @@ set(CMAKE_DEPEND_INFO_FILES
   "src/TestGenerator/CMakeFiles/TestGenerator.dir/DependInfo.cmake"
   "src/SUD/AverageAndCovariance/CMakeFiles/averageandcovariance.dir/DependInfo.cmake"
   "src/SUD/AverageAnomalyPresence/CMakeFiles/averageanomalypresence.dir/DependInfo.cmake"
+  "src/SUD/AverageAnomalyValue/CMakeFiles/averageanomalyvalue.dir/DependInfo.cmake"
+  "src/SUD/CovarianceAnomalyPresence/CMakeFiles/covarianceanomalypresence.dir/DependInfo.cmake"
+  "src/SUD/CovarianceAnomalyValue/CMakeFiles/covarianceanomalyvalue.dir/DependInfo.cmake"
+  "ScriptsDB/CMakeFiles/create-db.dir/DependInfo.cmake"
   )

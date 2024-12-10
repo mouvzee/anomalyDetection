@@ -1,2 +1,2 @@
-\set dbname pippi
+\set dbname detection
 \set username mouvzee

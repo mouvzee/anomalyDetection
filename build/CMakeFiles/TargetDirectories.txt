@@ -10,3 +10,15 @@
 /home/mouvzee/ingegneria/anomalyDetection/build/src/SUD/AverageAnomalyPresence/CMakeFiles/averageanomalypresence.dir
 /home/mouvzee/ingegneria/anomalyDetection/build/src/SUD/AverageAnomalyPresence/CMakeFiles/edit_cache.dir
 /home/mouvzee/ingegneria/anomalyDetection/build/src/SUD/AverageAnomalyPresence/CMakeFiles/rebuild_cache.dir
+/home/mouvzee/ingegneria/anomalyDetection/build/src/SUD/AverageAnomalyValue/CMakeFiles/averageanomalyvalue.dir
+/home/mouvzee/ingegneria/anomalyDetection/build/src/SUD/AverageAnomalyValue/CMakeFiles/edit_cache.dir
+/home/mouvzee/ingegneria/anomalyDetection/build/src/SUD/AverageAnomalyValue/CMakeFiles/rebuild_cache.dir
+/home/mouvzee/ingegneria/anomalyDetection/build/src/SUD/CovarianceAnomalyPresence/CMakeFiles/covarianceanomalypresence.dir
+/home/mouvzee/ingegneria/anomalyDetection/build/src/SUD/CovarianceAnomalyPresence/CMakeFiles/edit_cache.dir
+/home/mouvzee/ingegneria/anomalyDetection/build/src/SUD/CovarianceAnomalyPresence/CMakeFiles/rebuild_cache.dir
+/home/mouvzee/ingegneria/anomalyDetection/build/src/SUD/CovarianceAnomalyValue/CMakeFiles/covarianceanomalyvalue.dir
+/home/mouvzee/ingegneria/anomalyDetection/build/src/SUD/CovarianceAnomalyValue/CMakeFiles/edit_cache.dir
+/home/mouvzee/ingegneria/anomalyDetection/build/src/SUD/CovarianceAnomalyValue/CMakeFiles/rebuild_cache.dir
+/home/mouvzee/ingegneria/anomalyDetection/build/ScriptsDB/CMakeFiles/create-db.dir
+/home/mouvzee/ingegneria/anomalyDetection/build/ScriptsDB/CMakeFiles/edit_cache.dir
+/home/mouvzee/ingegneria/anomalyDetection/build/ScriptsDB/CMakeFiles/rebuild_cache.dir

@@ -69,10 +69,16 @@ include CMakeFiles/run_all.dir/progress.make
 CMakeFiles/run_all: src/TestGenerator/TestGenerator
 CMakeFiles/run_all: src/SUD/AverageAndCovariance/averageandcovariance
 CMakeFiles/run_all: src/SUD/AverageAnomalyPresence/averageanomalypresence
+CMakeFiles/run_all: src/SUD/AverageAnomalyValue/averageanomalyvalue
+CMakeFiles/run_all: src/SUD/CovarianceAnomalyPresence/covarianceanomalypresence
+CMakeFiles/run_all: src/SUD/CovarianceAnomalyValue/covarianceanomalyvalue
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/mouvzee/ingegneria/anomalyDetection/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Esecuzione di tutti gli eseguibili"
 	src/TestGenerator/TestGenerator
 	src/SUD/AverageAndCovariance/averageandcovariance
 	src/SUD/AverageAnomalyPresence/averageanomalypresence
+	src/SUD/AverageAnomalyValue/averageanomalyvalue
+	src/SUD/CovarianceAnomalyPresence/covarianceanomalypresence
+	src/SUD/CovarianceAnomalyValue/covarianceanomalyvalue
 
 run_all: CMakeFiles/run_all
 run_all: CMakeFiles/run_all.dir/build.make

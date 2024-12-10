@@ -1,7 +1,7 @@
 
 -- database already exists
 
-\c pippi
+\c detection
 
 
 CREATE TABLE IF NOT EXISTS dataTable(

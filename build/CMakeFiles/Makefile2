@@ -66,12 +66,20 @@ CMAKE_BINARY_DIR = /home/mouvzee/ingegneria/anomalyDetection/build
 all: src/TestGenerator/all
 all: src/SUD/AverageAndCovariance/all
 all: src/SUD/AverageAnomalyPresence/all
+all: src/SUD/AverageAnomalyValue/all
+all: src/SUD/CovarianceAnomalyPresence/all
+all: src/SUD/CovarianceAnomalyValue/all
+all: ScriptsDB/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
 preinstall: src/TestGenerator/preinstall
 preinstall: src/SUD/AverageAndCovariance/preinstall
 preinstall: src/SUD/AverageAnomalyPresence/preinstall
+preinstall: src/SUD/AverageAnomalyValue/preinstall
+preinstall: src/SUD/CovarianceAnomalyPresence/preinstall
+preinstall: src/SUD/CovarianceAnomalyValue/preinstall
+preinstall: ScriptsDB/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
@@ -79,7 +87,26 @@ clean: CMakeFiles/run_all.dir/clean
 clean: src/TestGenerator/clean
 clean: src/SUD/AverageAndCovariance/clean
 clean: src/SUD/AverageAnomalyPresence/clean
+clean: src/SUD/AverageAnomalyValue/clean
+clean: src/SUD/CovarianceAnomalyPresence/clean
+clean: src/SUD/CovarianceAnomalyValue/clean
+clean: ScriptsDB/clean
 .PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory ScriptsDB
+
+# Recursive "all" directory target.
+ScriptsDB/all: ScriptsDB/CMakeFiles/create-db.dir/all
+.PHONY : ScriptsDB/all
+
+# Recursive "preinstall" directory target.
+ScriptsDB/preinstall:
+.PHONY : ScriptsDB/preinstall
+
+# Recursive "clean" directory target.
+ScriptsDB/clean: ScriptsDB/CMakeFiles/create-db.dir/clean
+.PHONY : ScriptsDB/clean
 
 #=============================================================================
 # Directory level rules for directory src/SUD/AverageAndCovariance
@@ -112,6 +139,51 @@ src/SUD/AverageAnomalyPresence/clean: src/SUD/AverageAnomalyPresence/CMakeFiles/
 .PHONY : src/SUD/AverageAnomalyPresence/clean
 
 #=============================================================================
+# Directory level rules for directory src/SUD/AverageAnomalyValue
+
+# Recursive "all" directory target.
+src/SUD/AverageAnomalyValue/all: src/SUD/AverageAnomalyValue/CMakeFiles/averageanomalyvalue.dir/all
+.PHONY : src/SUD/AverageAnomalyValue/all
+
+# Recursive "preinstall" directory target.
+src/SUD/AverageAnomalyValue/preinstall:
+.PHONY : src/SUD/AverageAnomalyValue/preinstall
+
+# Recursive "clean" directory target.
+src/SUD/AverageAnomalyValue/clean: src/SUD/AverageAnomalyValue/CMakeFiles/averageanomalyvalue.dir/clean
+.PHONY : src/SUD/AverageAnomalyValue/clean
+
+#=============================================================================
+# Directory level rules for directory src/SUD/CovarianceAnomalyPresence
+
+# Recursive "all" directory target.
+src/SUD/CovarianceAnomalyPresence/all: src/SUD/CovarianceAnomalyPresence/CMakeFiles/covarianceanomalypresence.dir/all
+.PHONY : src/SUD/CovarianceAnomalyPresence/all
+
+# Recursive "preinstall" directory target.
+src/SUD/CovarianceAnomalyPresence/preinstall:
+.PHONY : src/SUD/CovarianceAnomalyPresence/preinstall
+
+# Recursive "clean" directory target.
+src/SUD/CovarianceAnomalyPresence/clean: src/SUD/CovarianceAnomalyPresence/CMakeFiles/covarianceanomalypresence.dir/clean
+.PHONY : src/SUD/CovarianceAnomalyPresence/clean
+
+#=============================================================================
+# Directory level rules for directory src/SUD/CovarianceAnomalyValue
+
+# Recursive "all" directory target.
+src/SUD/CovarianceAnomalyValue/all: src/SUD/CovarianceAnomalyValue/CMakeFiles/covarianceanomalyvalue.dir/all
+.PHONY : src/SUD/CovarianceAnomalyValue/all
+
+# Recursive "preinstall" directory target.
+src/SUD/CovarianceAnomalyValue/preinstall:
+.PHONY : src/SUD/CovarianceAnomalyValue/preinstall
+
+# Recursive "clean" directory target.
+src/SUD/CovarianceAnomalyValue/clean: src/SUD/CovarianceAnomalyValue/CMakeFiles/covarianceanomalyvalue.dir/clean
+.PHONY : src/SUD/CovarianceAnomalyValue/clean
+
+#=============================================================================
 # Directory level rules for directory src/TestGenerator
 
 # Recursive "all" directory target.
@@ -133,14 +205,17 @@ src/TestGenerator/clean: src/TestGenerator/CMakeFiles/TestGenerator.dir/clean
 CMakeFiles/run_all.dir/all: src/TestGenerator/CMakeFiles/TestGenerator.dir/all
 CMakeFiles/run_all.dir/all: src/SUD/AverageAndCovariance/CMakeFiles/averageandcovariance.dir/all
 CMakeFiles/run_all.dir/all: src/SUD/AverageAnomalyPresence/CMakeFiles/averageanomalypresence.dir/all
+CMakeFiles/run_all.dir/all: src/SUD/AverageAnomalyValue/CMakeFiles/averageanomalyvalue.dir/all
+CMakeFiles/run_all.dir/all: src/SUD/CovarianceAnomalyPresence/CMakeFiles/covarianceanomalypresence.dir/all
+CMakeFiles/run_all.dir/all: src/SUD/CovarianceAnomalyValue/CMakeFiles/covarianceanomalyvalue.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_all.dir/build.make CMakeFiles/run_all.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_all.dir/build.make CMakeFiles/run_all.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mouvzee/ingegneria/anomalyDetection/build/CMakeFiles --progress-num=19 "Built target run_all"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mouvzee/ingegneria/anomalyDetection/build/CMakeFiles --progress-num=34 "Built target run_all"
 .PHONY : CMakeFiles/run_all.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/run_all.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mouvzee/ingegneria/anomalyDetection/build/CMakeFiles 19
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mouvzee/ingegneria/anomalyDetection/build/CMakeFiles 33
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/run_all.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/mouvzee/ingegneria/anomalyDetection/build/CMakeFiles 0
 .PHONY : CMakeFiles/run_all.dir/rule
@@ -231,6 +306,110 @@ averageanomalypresence: src/SUD/AverageAnomalyPresence/CMakeFiles/averageanomaly
 src/SUD/AverageAnomalyPresence/CMakeFiles/averageanomalypresence.dir/clean:
 	$(MAKE) $(MAKESILENT) -f src/SUD/AverageAnomalyPresence/CMakeFiles/averageanomalypresence.dir/build.make src/SUD/AverageAnomalyPresence/CMakeFiles/averageanomalypresence.dir/clean
 .PHONY : src/SUD/AverageAnomalyPresence/CMakeFiles/averageanomalypresence.dir/clean
+
+#=============================================================================
+# Target rules for target src/SUD/AverageAnomalyValue/CMakeFiles/averageanomalyvalue.dir
+
+# All Build rule for target.
+src/SUD/AverageAnomalyValue/CMakeFiles/averageanomalyvalue.dir/all:
+	$(MAKE) $(MAKESILENT) -f src/SUD/AverageAnomalyValue/CMakeFiles/averageanomalyvalue.dir/build.make src/SUD/AverageAnomalyValue/CMakeFiles/averageanomalyvalue.dir/depend
+	$(MAKE) $(MAKESILENT) -f src/SUD/AverageAnomalyValue/CMakeFiles/averageanomalyvalue.dir/build.make src/SUD/AverageAnomalyValue/CMakeFiles/averageanomalyvalue.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mouvzee/ingegneria/anomalyDetection/build/CMakeFiles --progress-num=19,20,21,22,23 "Built target averageanomalyvalue"
+.PHONY : src/SUD/AverageAnomalyValue/CMakeFiles/averageanomalyvalue.dir/all
+
+# Build rule for subdir invocation for target.
+src/SUD/AverageAnomalyValue/CMakeFiles/averageanomalyvalue.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mouvzee/ingegneria/anomalyDetection/build/CMakeFiles 5
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/SUD/AverageAnomalyValue/CMakeFiles/averageanomalyvalue.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mouvzee/ingegneria/anomalyDetection/build/CMakeFiles 0
+.PHONY : src/SUD/AverageAnomalyValue/CMakeFiles/averageanomalyvalue.dir/rule
+
+# Convenience name for target.
+averageanomalyvalue: src/SUD/AverageAnomalyValue/CMakeFiles/averageanomalyvalue.dir/rule
+.PHONY : averageanomalyvalue
+
+# clean rule for target.
+src/SUD/AverageAnomalyValue/CMakeFiles/averageanomalyvalue.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src/SUD/AverageAnomalyValue/CMakeFiles/averageanomalyvalue.dir/build.make src/SUD/AverageAnomalyValue/CMakeFiles/averageanomalyvalue.dir/clean
+.PHONY : src/SUD/AverageAnomalyValue/CMakeFiles/averageanomalyvalue.dir/clean
+
+#=============================================================================
+# Target rules for target src/SUD/CovarianceAnomalyPresence/CMakeFiles/covarianceanomalypresence.dir
+
+# All Build rule for target.
+src/SUD/CovarianceAnomalyPresence/CMakeFiles/covarianceanomalypresence.dir/all:
+	$(MAKE) $(MAKESILENT) -f src/SUD/CovarianceAnomalyPresence/CMakeFiles/covarianceanomalypresence.dir/build.make src/SUD/CovarianceAnomalyPresence/CMakeFiles/covarianceanomalypresence.dir/depend
+	$(MAKE) $(MAKESILENT) -f src/SUD/CovarianceAnomalyPresence/CMakeFiles/covarianceanomalypresence.dir/build.make src/SUD/CovarianceAnomalyPresence/CMakeFiles/covarianceanomalypresence.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mouvzee/ingegneria/anomalyDetection/build/CMakeFiles --progress-num=24,25,26,27 "Built target covarianceanomalypresence"
+.PHONY : src/SUD/CovarianceAnomalyPresence/CMakeFiles/covarianceanomalypresence.dir/all
+
+# Build rule for subdir invocation for target.
+src/SUD/CovarianceAnomalyPresence/CMakeFiles/covarianceanomalypresence.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mouvzee/ingegneria/anomalyDetection/build/CMakeFiles 4
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/SUD/CovarianceAnomalyPresence/CMakeFiles/covarianceanomalypresence.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mouvzee/ingegneria/anomalyDetection/build/CMakeFiles 0
+.PHONY : src/SUD/CovarianceAnomalyPresence/CMakeFiles/covarianceanomalypresence.dir/rule
+
+# Convenience name for target.
+covarianceanomalypresence: src/SUD/CovarianceAnomalyPresence/CMakeFiles/covarianceanomalypresence.dir/rule
+.PHONY : covarianceanomalypresence
+
+# clean rule for target.
+src/SUD/CovarianceAnomalyPresence/CMakeFiles/covarianceanomalypresence.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src/SUD/CovarianceAnomalyPresence/CMakeFiles/covarianceanomalypresence.dir/build.make src/SUD/CovarianceAnomalyPresence/CMakeFiles/covarianceanomalypresence.dir/clean
+.PHONY : src/SUD/CovarianceAnomalyPresence/CMakeFiles/covarianceanomalypresence.dir/clean
+
+#=============================================================================
+# Target rules for target src/SUD/CovarianceAnomalyValue/CMakeFiles/covarianceanomalyvalue.dir
+
+# All Build rule for target.
+src/SUD/CovarianceAnomalyValue/CMakeFiles/covarianceanomalyvalue.dir/all:
+	$(MAKE) $(MAKESILENT) -f src/SUD/CovarianceAnomalyValue/CMakeFiles/covarianceanomalyvalue.dir/build.make src/SUD/CovarianceAnomalyValue/CMakeFiles/covarianceanomalyvalue.dir/depend
+	$(MAKE) $(MAKESILENT) -f src/SUD/CovarianceAnomalyValue/CMakeFiles/covarianceanomalyvalue.dir/build.make src/SUD/CovarianceAnomalyValue/CMakeFiles/covarianceanomalyvalue.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mouvzee/ingegneria/anomalyDetection/build/CMakeFiles --progress-num=28,29,30,31,32 "Built target covarianceanomalyvalue"
+.PHONY : src/SUD/CovarianceAnomalyValue/CMakeFiles/covarianceanomalyvalue.dir/all
+
+# Build rule for subdir invocation for target.
+src/SUD/CovarianceAnomalyValue/CMakeFiles/covarianceanomalyvalue.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mouvzee/ingegneria/anomalyDetection/build/CMakeFiles 5
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/SUD/CovarianceAnomalyValue/CMakeFiles/covarianceanomalyvalue.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mouvzee/ingegneria/anomalyDetection/build/CMakeFiles 0
+.PHONY : src/SUD/CovarianceAnomalyValue/CMakeFiles/covarianceanomalyvalue.dir/rule
+
+# Convenience name for target.
+covarianceanomalyvalue: src/SUD/CovarianceAnomalyValue/CMakeFiles/covarianceanomalyvalue.dir/rule
+.PHONY : covarianceanomalyvalue
+
+# clean rule for target.
+src/SUD/CovarianceAnomalyValue/CMakeFiles/covarianceanomalyvalue.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src/SUD/CovarianceAnomalyValue/CMakeFiles/covarianceanomalyvalue.dir/build.make src/SUD/CovarianceAnomalyValue/CMakeFiles/covarianceanomalyvalue.dir/clean
+.PHONY : src/SUD/CovarianceAnomalyValue/CMakeFiles/covarianceanomalyvalue.dir/clean
+
+#=============================================================================
+# Target rules for target ScriptsDB/CMakeFiles/create-db.dir
+
+# All Build rule for target.
+ScriptsDB/CMakeFiles/create-db.dir/all:
+	$(MAKE) $(MAKESILENT) -f ScriptsDB/CMakeFiles/create-db.dir/build.make ScriptsDB/CMakeFiles/create-db.dir/depend
+	$(MAKE) $(MAKESILENT) -f ScriptsDB/CMakeFiles/create-db.dir/build.make ScriptsDB/CMakeFiles/create-db.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mouvzee/ingegneria/anomalyDetection/build/CMakeFiles --progress-num=33 "Built target create-db"
+.PHONY : ScriptsDB/CMakeFiles/create-db.dir/all
+
+# Build rule for subdir invocation for target.
+ScriptsDB/CMakeFiles/create-db.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mouvzee/ingegneria/anomalyDetection/build/CMakeFiles 1
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ScriptsDB/CMakeFiles/create-db.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mouvzee/ingegneria/anomalyDetection/build/CMakeFiles 0
+.PHONY : ScriptsDB/CMakeFiles/create-db.dir/rule
+
+# Convenience name for target.
+create-db: ScriptsDB/CMakeFiles/create-db.dir/rule
+.PHONY : create-db
+
+# clean rule for target.
+ScriptsDB/CMakeFiles/create-db.dir/clean:
+	$(MAKE) $(MAKESILENT) -f ScriptsDB/CMakeFiles/create-db.dir/build.make ScriptsDB/CMakeFiles/create-db.dir/clean
+.PHONY : ScriptsDB/CMakeFiles/create-db.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

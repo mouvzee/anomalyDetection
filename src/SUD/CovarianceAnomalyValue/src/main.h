@@ -15,7 +15,6 @@
 #include <iomanip>
 #include <tuple>
 #include <limits>
-#include <cmath>
 
 // Struttura per i dati dei sensori con presenza e valore anomalia delle medie
 struct Data {
@@ -53,13 +52,10 @@ struct AnomalyCovariance {
 };
 
 // Legge i dati da SQL e li salva in una struttura dati
-bool readDataSQL(std::map<std::string, std::vector<Data>> &dataVector, std::map<std::string, std::vector<Average>> &averages, std::vector<std::vector<std::vector<Covariance>>> &covariances, PGconn *conn);
-
-// Ordina i sensori in modo crescente per le cifre dell'id
-bool sensorSorting(const std::string &str1, const std::string &str2);
+bool readDataSQL(std::map<std::int32_t, std::vector<Data>> &dataVector, std::map<std::int32_t, std::vector<Average>> &averages, std::vector<std::vector<std::vector<Covariance>>> &covariances, PGconn *conn);
 
 // Calcola il valore dell'anomalia di una matrice di covarianze
-std::vector<std::vector<std::vector<AnomalyCovariance>>> calculateAnomaly(std::map<std::string, std::vector<Data>> &dataVector, std::map<std::string, std::vector<Average>> &averages, std::vector<std::vector<std::vector<Covariance>>> &covariances);
+std::vector<std::vector<std::vector<AnomalyCovariance>>> calculateAnomaly(std::map<std::int32_t, std::vector<Data>> &dataVector, std::map<std::int32_t, std::vector<Average>> &averages, std::vector<std::vector<std::vector<Covariance>>> &covariances);
 
 // Salva i dati su SQL
 bool saveAnomalySQL(std::vector<std::vector<std::vector<AnomalyCovariance>>> &covarianceAnomalyVector, PGconn *conn);

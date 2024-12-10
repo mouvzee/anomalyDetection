@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.16)
-project(covarianceanomalyvalue CXX)
+project(covarianceanomalypresence CXX)
 
 # Imposta lo standard di C++
 set(CMAKE_CXX_STANDARD 20)
@@ -14,10 +14,10 @@ set(SOURCE_FILES
         src/updateDataSQL.cpp)
 
 # Aggiungi l'eseguibile
-add_executable(covarianceanomalyvalue ${SOURCE_FILES})
+add_executable(covarianceanomalypresence ${SOURCE_FILES})
 
 # Aggiungi opzioni di compilazione
-target_compile_options(covarianceanomalyvalue PRIVATE -Wall -g -ggdb)
+target_compile_options(covarianceanomalypresence PRIVATE -Wall -g -ggdb)
 
 # Link alle librerie necessarie
-target_link_libraries(covarianceanomalyvalue PRIVATE pq m hiredis)
+target_link_libraries(covarianceanomalypresence PRIVATE pq m hiredis)

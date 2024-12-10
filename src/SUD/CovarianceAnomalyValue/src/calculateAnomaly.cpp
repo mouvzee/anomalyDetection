@@ -1,6 +1,6 @@
 #include "main.h"
 
-std::vector<std::vector<std::vector<AnomalyCovariance>>> calculateAnomaly(std::map<std::string, std::vector<Data>> &dataVector, std::map<std::string, std::vector<Average>> &averages, std::vector<std::vector<std::vector<Covariance>>> &covariances){
+std::vector<std::vector<std::vector<AnomalyCovariance>>> calculateAnomaly(std::map<std::int32_t, std::vector<Data>> &dataVector, std::map<std::int32_t, std::vector<Average>> &averages, std::vector<std::vector<std::vector<Covariance>>> &covariances){
 
     // Creazione matrice per le anomalie delle covarianze
     std::vector<std::vector<std::vector<AnomalyCovariance>>> covarianceAnomalyVector{};
@@ -24,16 +24,16 @@ std::vector<std::vector<std::vector<AnomalyCovariance>>> calculateAnomaly(std::m
 
                 // Lettura valore dei due sensori ad un determinato timeStamp
                 Covariance covariance = covariances[i][j][k];
-                std::string valS1 = dataVector["SAC" + std::to_string(i)][covariance.lastSampleTime].value;
-                std::string valS2 = dataVector["SAC" + std::to_string(j)][covariance.lastSampleTime].value;
+                std::string valS1 = dataVector[i][covariance.lastSampleTime].value;
+                std::string valS2 = dataVector[j][covariance.lastSampleTime].value;
                 if(valS1 == "" || valS2 == ""){
                     covarianceAnomalyVector[i][j][k].value = std::nan("");
                     continue;
                 }
 
                 // Lettura media dei due sensori di una determinata finestra, calcolo del valore dell'anomalia e salvataggio nella matrice
-                double averageS1 = averages["SAC" + std::to_string(i)][k].value;
-                double averageS2 = averages["SAC" + std::to_string(j)][k].value;
+                double averageS1 = averages[i][k].value;
+                double averageS2 = averages[j][k].value;
                 double anomalyValue;
                 if (covariance.value == 0){
                     anomalyValue = ((std::stod(valS1) - averageS1) * (std::stod(valS2) - averageS2)) / 0.000001;

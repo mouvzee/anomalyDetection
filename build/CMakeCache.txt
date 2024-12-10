@@ -193,6 +193,15 @@ CMAKE_STRIP:FILEPATH=/usr/bin/strip
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
 //Value Computed by CMake
+ScriptsDB_BINARY_DIR:STATIC=/home/mouvzee/ingegneria/anomalyDetection/build/ScriptsDB
+
+//Value Computed by CMake
+ScriptsDB_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+ScriptsDB_SOURCE_DIR:STATIC=/home/mouvzee/ingegneria/anomalyDetection/ScriptsDB
+
+//Value Computed by CMake
 TestGenerator_BINARY_DIR:STATIC=/home/mouvzee/ingegneria/anomalyDetection/build/src/TestGenerator
 
 //Value Computed by CMake
@@ -218,6 +227,33 @@ averageanomalypresence_IS_TOP_LEVEL:STATIC=OFF
 
 //Value Computed by CMake
 averageanomalypresence_SOURCE_DIR:STATIC=/home/mouvzee/ingegneria/anomalyDetection/src/SUD/AverageAnomalyPresence
+
+//Value Computed by CMake
+averageanomalyvalue_BINARY_DIR:STATIC=/home/mouvzee/ingegneria/anomalyDetection/build/src/SUD/AverageAnomalyValue
+
+//Value Computed by CMake
+averageanomalyvalue_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+averageanomalyvalue_SOURCE_DIR:STATIC=/home/mouvzee/ingegneria/anomalyDetection/src/SUD/AverageAnomalyValue
+
+//Value Computed by CMake
+covarianceanomalypresence_BINARY_DIR:STATIC=/home/mouvzee/ingegneria/anomalyDetection/build/src/SUD/CovarianceAnomalyPresence
+
+//Value Computed by CMake
+covarianceanomalypresence_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+covarianceanomalypresence_SOURCE_DIR:STATIC=/home/mouvzee/ingegneria/anomalyDetection/src/SUD/CovarianceAnomalyPresence
+
+//Value Computed by CMake
+covarianceanomalyvalue_BINARY_DIR:STATIC=/home/mouvzee/ingegneria/anomalyDetection/build/src/SUD/CovarianceAnomalyValue
+
+//Value Computed by CMake
+covarianceanomalyvalue_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+covarianceanomalyvalue_SOURCE_DIR:STATIC=/home/mouvzee/ingegneria/anomalyDetection/src/SUD/CovarianceAnomalyValue
 
 
 ########################
@@ -308,7 +344,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=4
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=8
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

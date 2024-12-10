@@ -1,8 +1,8 @@
 
-\c pippi postgres
+\c detection postgres
 
 -- user already exists
-GRANT ALL PRIVILEGES ON DATABASE pippi to mouvzee ;
+GRANT ALL PRIVILEGES ON DATABASE detection to mouvzee ;
 
 
 ALTER TABLE dataTable OWNER TO mouvzee ;

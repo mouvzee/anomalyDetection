@@ -168,6 +168,58 @@ averageanomalypresence/fast:
 	$(MAKE) $(MAKESILENT) -f src/SUD/AverageAnomalyPresence/CMakeFiles/averageanomalypresence.dir/build.make src/SUD/AverageAnomalyPresence/CMakeFiles/averageanomalypresence.dir/build
 .PHONY : averageanomalypresence/fast
 
+#=============================================================================
+# Target rules for targets named averageanomalyvalue
+
+# Build rule for target.
+averageanomalyvalue: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 averageanomalyvalue
+.PHONY : averageanomalyvalue
+
+# fast build rule for target.
+averageanomalyvalue/fast:
+	$(MAKE) $(MAKESILENT) -f src/SUD/AverageAnomalyValue/CMakeFiles/averageanomalyvalue.dir/build.make src/SUD/AverageAnomalyValue/CMakeFiles/averageanomalyvalue.dir/build
+.PHONY : averageanomalyvalue/fast
+
+#=============================================================================
+# Target rules for targets named covarianceanomalypresence
+
+# Build rule for target.
+covarianceanomalypresence: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 covarianceanomalypresence
+.PHONY : covarianceanomalypresence
+
+# fast build rule for target.
+covarianceanomalypresence/fast:
+	$(MAKE) $(MAKESILENT) -f src/SUD/CovarianceAnomalyPresence/CMakeFiles/covarianceanomalypresence.dir/build.make src/SUD/CovarianceAnomalyPresence/CMakeFiles/covarianceanomalypresence.dir/build
+.PHONY : covarianceanomalypresence/fast
+
+#=============================================================================
+# Target rules for targets named covarianceanomalyvalue
+
+# Build rule for target.
+covarianceanomalyvalue: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 covarianceanomalyvalue
+.PHONY : covarianceanomalyvalue
+
+# fast build rule for target.
+covarianceanomalyvalue/fast:
+	$(MAKE) $(MAKESILENT) -f src/SUD/CovarianceAnomalyValue/CMakeFiles/covarianceanomalyvalue.dir/build.make src/SUD/CovarianceAnomalyValue/CMakeFiles/covarianceanomalyvalue.dir/build
+.PHONY : covarianceanomalyvalue/fast
+
+#=============================================================================
+# Target rules for targets named create-db
+
+# Build rule for target.
+create-db: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 create-db
+.PHONY : create-db
+
+# fast build rule for target.
+create-db/fast:
+	$(MAKE) $(MAKESILENT) -f ScriptsDB/CMakeFiles/create-db.dir/build.make ScriptsDB/CMakeFiles/create-db.dir/build
+.PHONY : create-db/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -176,10 +228,14 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... create-db"
 	@echo "... run_all"
 	@echo "... TestGenerator"
 	@echo "... averageandcovariance"
 	@echo "... averageanomalypresence"
+	@echo "... averageanomalyvalue"
+	@echo "... covarianceanomalypresence"
+	@echo "... covarianceanomalyvalue"
 .PHONY : help
 
 

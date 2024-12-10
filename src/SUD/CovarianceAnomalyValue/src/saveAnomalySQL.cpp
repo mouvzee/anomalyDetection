@@ -9,9 +9,11 @@ bool saveAnomalySQL(std::vector<std::vector<std::vector<AnomalyCovariance>>> &co
 
                 AnomalyCovariance anomaly = covarianceAnomalyVector[i][j][k];
                 std::string value = std::isnan(anomaly.value) ? "NULL" : std::to_string(anomaly.value);
+                anomaly.isAnomaly = std::isnan(anomaly.value) ? false : true;
+                std::cout << "Anomaly: " << anomaly.sensorID1 << " " << anomaly.sensorID2 << " " << anomaly.value << " " << anomaly.isAnomaly << std::endl;
 
                 // Query per inserimento del valore anomalo nel database
-                std::string query = "INSERT INTO anomalyCovarianceTable (sensorID1, sensorID2, firstSampleTime, value) VALUES ('" + anomaly.sensorID1 + "', '" + anomaly.sensorID2 + "', " + std::to_string(k) + ", " + value + ")";
+                std::string query = "INSERT INTO anomalyCovarianceTable (sensorID1, sensorID2, firstSampleTime, value, isAnomaly) VALUES ('" + anomaly.sensorID1 + "', '" + anomaly.sensorID2 + "', " + std::to_string(k) + ", " + value + ", " + std::to_string(anomaly.isAnomaly) + ");";
                 PGresult *res = PQexec(conn, query.c_str());
                 if (PQresultStatus(res) != PGRES_COMMAND_OK) {
                     std::cerr << "Errore durante l'esecuzione della query di inserimento anomalie di covarianza: " << PQresultErrorMessage(res) << std::endl;
