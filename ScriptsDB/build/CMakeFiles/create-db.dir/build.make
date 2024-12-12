@@ -69,7 +69,7 @@ include CMakeFiles/create-db.dir/progress.make
 CMakeFiles/create-db:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/mouvzee/ingegneria/anomalyDetection/ScriptsDB/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Creazione del database usando create.sh"
 	/usr/bin/cmake -E echo Esecuzione\ degli\ script\ SQL\ per\ creare\ il\ database...
-	sudo /home/mouvzee/ingegneria/anomalyDetection/ScriptsDB/create.sh
+	bash /home/mouvzee/ingegneria/anomalyDetection/ScriptsDB/create.sh
 
 create-db: CMakeFiles/create-db
 create-db: CMakeFiles/create-db.dir/build.make

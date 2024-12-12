@@ -14,7 +14,6 @@ add_subdirectory(src/SUD/AverageAnomalyPresence)
 add_subdirectory(src/SUD/AverageAnomalyValue)
 add_subdirectory(src/SUD/CovarianceAnomalyPresence)
 add_subdirectory(src/SUD/CovarianceAnomalyValue)
-add_subdirectory(ScriptsDB)
 
 
 # Comandi personalizzati per eseguire gli eseguibili

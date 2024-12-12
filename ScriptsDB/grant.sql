@@ -1,5 +1,5 @@
 
-\c detection postgres
+\c detection mouvzee
 
 -- user already exists
 GRANT ALL PRIVILEGES ON DATABASE detection to mouvzee ;

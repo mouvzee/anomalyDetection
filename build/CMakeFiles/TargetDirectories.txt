@@ -19,6 +19,3 @@
 /home/mouvzee/ingegneria/anomalyDetection/build/src/SUD/CovarianceAnomalyValue/CMakeFiles/covarianceanomalyvalue.dir
 /home/mouvzee/ingegneria/anomalyDetection/build/src/SUD/CovarianceAnomalyValue/CMakeFiles/edit_cache.dir
 /home/mouvzee/ingegneria/anomalyDetection/build/src/SUD/CovarianceAnomalyValue/CMakeFiles/rebuild_cache.dir
-/home/mouvzee/ingegneria/anomalyDetection/build/ScriptsDB/CMakeFiles/create-db.dir
-/home/mouvzee/ingegneria/anomalyDetection/build/ScriptsDB/CMakeFiles/edit_cache.dir
-/home/mouvzee/ingegneria/anomalyDetection/build/ScriptsDB/CMakeFiles/rebuild_cache.dir

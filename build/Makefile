@@ -207,19 +207,6 @@ covarianceanomalyvalue/fast:
 	$(MAKE) $(MAKESILENT) -f src/SUD/CovarianceAnomalyValue/CMakeFiles/covarianceanomalyvalue.dir/build.make src/SUD/CovarianceAnomalyValue/CMakeFiles/covarianceanomalyvalue.dir/build
 .PHONY : covarianceanomalyvalue/fast
 
-#=============================================================================
-# Target rules for targets named create-db
-
-# Build rule for target.
-create-db: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 create-db
-.PHONY : create-db
-
-# fast build rule for target.
-create-db/fast:
-	$(MAKE) $(MAKESILENT) -f ScriptsDB/CMakeFiles/create-db.dir/build.make ScriptsDB/CMakeFiles/create-db.dir/build
-.PHONY : create-db/fast
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -228,7 +215,6 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... create-db"
 	@echo "... run_all"
 	@echo "... TestGenerator"
 	@echo "... averageandcovariance"

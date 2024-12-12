@@ -8,10 +8,10 @@ CREATE DATABASE detection ;
 
 -- This creates the user :username
 
-\c detection postgres
+\c detection mouvzee
 
 -- erase role if already created
-REASSIGN OWNED BY postgres TO mouvzee ;
+REASSIGN OWNED BY mouvzee TO postgres ;
 REVOKE ALL PRIVILEGES ON ALL TABLES IN SCHEMA public FROM mouvzee ;
 REVOKE ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA public FROM mouvzee ;
 REVOKE ALL PRIVILEGES ON ALL FUNCTIONS IN SCHEMA public FROM mouvzee ;
@@ -22,7 +22,7 @@ CREATE USER mouvzee WITH ENCRYPTED PASSWORD '13070' ;
 
 
 
-\c detection postgres
+\c detection mouvzee
 
 -- grant privileges to user
 
