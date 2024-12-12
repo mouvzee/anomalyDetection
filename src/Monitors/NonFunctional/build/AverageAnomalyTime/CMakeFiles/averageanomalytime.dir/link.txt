@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/averageanomalytime.dir/src/main.cpp.o CMakeFiles/averageanomalytime.dir/src/updateDataSQL.cpp.o -o averageanomalytime  -lpq -lm -lhiredis 

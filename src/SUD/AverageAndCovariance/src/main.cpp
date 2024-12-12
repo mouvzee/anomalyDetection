@@ -14,8 +14,7 @@ int main() {
         return 1;
     }
 
-    // debug
-    std::cout << "ciao" << std::endl;
+
 
 
     // Lettura dati da Redis e creazione vettore di dati
@@ -33,7 +32,7 @@ int main() {
         return 1;
     }
 
-    std::cout << "connessione db ok." << std::endl;
+    std::cout << "connessione al database stabilita." << std::endl;
 
     // Salvataggio dati in PostgreSQL
     if (!saveDataOnDB(dataVector, conn)){
@@ -41,9 +40,6 @@ int main() {
         return 1;
     }
 
-    //debug
-    std::cout << "ciao3" << std::endl;
-    std::cout << "dataVector.size(): " << dataVector.size() << std::endl;
 
     //Massimo sampleTime
     size_t MaxST = std::stoi(dataVector.back().sampleTime);
@@ -67,7 +63,7 @@ int main() {
             return 1;
         }
 
-        std::cout << "Salvataggio medie ok." << std::endl;
+        std::cout << "Salvataggio delle medie completato." << std::endl;
 
         //Calcolo delle covarianze
         std::vector<std::vector<double>> covariances = covarianceValue(averages, sensors);
@@ -78,11 +74,8 @@ int main() {
             return 1;
         }
 
-        std::cout << "Salvataggio covarianze ok." << std::endl;
+        std::cout << "Salvataggio delle covarianze completato." << std::endl;
     }
-
-    //debug
-    std::cout << "ciao4" << std::endl;
 
     
 }

@@ -25,7 +25,6 @@ bool readFileCSV(std::string fileName, std::vector<Data> &dataVector) {
 
         Data data = {sampleTime, sensorID, value};
 
-        std::cout << "SampleTime: " << sampleTime << " SensorID: " << sensorID << " Value: " << value << std::endl;
         dataVector.push_back(data);
         
     }

@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/averageanomalypresence.dir/src/main.cpp.o CMakeFiles/averageanomalypresence.dir/src/detectAnomaly.cpp.o CMakeFiles/averageanomalypresence.dir/src/readDataSQL.cpp.o CMakeFiles/averageanomalypresence.dir/src/saveAnomalySQL.cpp.o CMakeFiles/averageanomalypresence.dir/src/checkWindowSize.cpp.o -o averageanomalypresence  -lpq -lm -lhiredis 

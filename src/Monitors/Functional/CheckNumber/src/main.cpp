@@ -15,5 +15,5 @@ int main() {
         return 1;
     }
 
-    std::cout << "Monitor Numero Anomalie completato con successo" << std::endl;
+    std::cout << "Monitor per il conteggio delle anomalie completato con successo." << std::endl;
 }

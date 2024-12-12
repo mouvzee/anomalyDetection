@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/averagedetectiontime.dir/src/main.cpp.o CMakeFiles/averagedetectiontime.dir/src/updateDataSQL.cpp.o -o averagedetectiontime  -lpq -lm -lhiredis 

@@ -31,10 +31,10 @@ int main() {
             std::cerr << "Impossibile inviare il command a Redis." << std::endl;
             return 1;
         }
-        std::cout << "Risposta da Redis: " << reply->str << std::endl;
         freeReplyObject(reply);
     }
 
     redisFree(context);
+    std::cout << "Lettura dati completata." << std::endl;
     return 0;
 }

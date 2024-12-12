@@ -17,5 +17,6 @@ int main() {
     }
 
     PQfinish(conn);
+    std::cout << "Monitor per il calcolo del deltaTime sulla media completato con successo." << std::endl;
     return 0;
 }

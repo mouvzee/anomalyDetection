@@ -13,8 +13,7 @@ std::vector<std::vector<double>> covarianceValue(const std::vector<double>& aver
 
 
             std::vector<double> sensor2 = sensors[j];
-            std::cout << "sensor1.size(): " << sensor1.size() << std::endl;
-            std::cout << "sensor2.size(): " << sensor2.size() << std::endl;
+
             int numberOfValue = 0;
             double totalSum = 0;
 
@@ -39,6 +38,5 @@ std::vector<std::vector<double>> covarianceValue(const std::vector<double>& aver
         }
 
     }
-    std::cout << "CovarianceValue terminata" << std::endl;
     return covariances;
 }

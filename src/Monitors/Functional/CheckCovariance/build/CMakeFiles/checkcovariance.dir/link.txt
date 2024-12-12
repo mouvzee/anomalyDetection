@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/checkcovariance.dir/src/main.cpp.o CMakeFiles/checkcovariance.dir/src/covarianceAnomalyMonitor.cpp.o -o checkcovariance  -lpq -lm -lhiredis 

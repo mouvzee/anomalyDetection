@@ -13,7 +13,7 @@ bool readDataRedis(redisContext *context, std::vector<Data> &dataVector) {
         redisFree(context);
         return 1;
     }
-    std::cout << "Connessione e recupero dati redis ok" << std::endl;
+    std::cout << "Connessione e recupero dati da Redis completato." << std::endl;
 
     //estraggo i dati dalla risposta
     for (size_t i = 0; i < reply_sensors->element[0]->element[1]->elements; i++) {

@@ -15,6 +15,6 @@ int main() {
         return 1;
     }
 
-    std::cout << "Monitor Coerenza Covarianza completato con successo" << std::endl;
+    std::cout << "Monitoraggio delle anomalie sulle covarianze completato con successo." << std::endl;
     PQfinish(conn);
 }

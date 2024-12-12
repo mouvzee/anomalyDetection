@@ -16,7 +16,7 @@ int main() {
         return 1;
     }
 
-    std::cout << "Dati aggiornati correttamente" << std::endl;
+    std::cout << "Monitor per il calcolo dell'exceededTime sulla covarianza completato con successo." << std::endl;
 
     PQfinish(conn);
     return 0;

@@ -10,7 +10,6 @@ int main() {
         return 1;
     }
 
-    std::cout << "Connessione a PostgreSQL riuscita" << std::endl;
 
     // Aggiornamento del della tabella delle anomalie delle covarianze
     if(!updateDataSQL(conn)){
@@ -18,7 +17,7 @@ int main() {
         return 1;
     }
 
-    std::cout << "Aggiornamento della tabella delle anomalie delle covarianze riuscito" << std::endl;
+    std::cout << "Calcolo presenza anomalia sulla covarianza completato." << std::endl;
 
     PQfinish(conn);
     return 0;

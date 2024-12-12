@@ -15,7 +15,7 @@ int main() {
         return 1;
     }
 
-    std::cout << "Monitoraggio delle anomalie medie completato con successo" << std::endl;
+    std::cout << "Monitoraggio delle anomalie sulle medie completato con successo." << std::endl;
     PQfinish(conn);
     return 0;
 }

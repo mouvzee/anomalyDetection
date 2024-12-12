@@ -1,3 +1,0 @@
-/home/mouvzee/ingegneria/anomalyDetection/src/Monitors/Functional/CheckAverage/build/CMakeFiles/checkaverage.dir
-/home/mouvzee/ingegneria/anomalyDetection/src/Monitors/Functional/CheckAverage/build/CMakeFiles/edit_cache.dir
-/home/mouvzee/ingegneria/anomalyDetection/src/Monitors/Functional/CheckAverage/build/CMakeFiles/rebuild_cache.dir

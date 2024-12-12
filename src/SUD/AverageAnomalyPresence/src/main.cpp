@@ -27,7 +27,7 @@ int main() {
         return 1;
     }
 
-    std::cout << "Operazione completata con successo" << std::endl;
+    std::cout << "Calcolo anomalia sulla media completato con successo." << std::endl;
     
     PQfinish(conn);
     return 0;

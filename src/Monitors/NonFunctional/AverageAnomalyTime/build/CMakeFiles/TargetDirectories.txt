@@ -1,3 +1,0 @@
-/home/mouvzee/ingegneria/anomalyDetection/src/Monitors/NonFunctional/AverageAnomalyTime/build/CMakeFiles/averageanomalytime.dir
-/home/mouvzee/ingegneria/anomalyDetection/src/Monitors/NonFunctional/AverageAnomalyTime/build/CMakeFiles/edit_cache.dir
-/home/mouvzee/ingegneria/anomalyDetection/src/Monitors/NonFunctional/AverageAnomalyTime/build/CMakeFiles/rebuild_cache.dir

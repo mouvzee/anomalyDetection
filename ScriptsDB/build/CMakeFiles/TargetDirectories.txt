@@ -1,3 +1,0 @@
-/home/mouvzee/ingegneria/anomalyDetection/ScriptsDB/build/CMakeFiles/create-db.dir
-/home/mouvzee/ingegneria/anomalyDetection/ScriptsDB/build/CMakeFiles/edit_cache.dir
-/home/mouvzee/ingegneria/anomalyDetection/ScriptsDB/build/CMakeFiles/rebuild_cache.dir

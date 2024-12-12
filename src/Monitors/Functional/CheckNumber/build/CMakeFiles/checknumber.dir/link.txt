@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/checknumber.dir/src/main.cpp.o CMakeFiles/checknumber.dir/src/numberAnomalyMonitor.cpp.o -o checknumber  -lpq -lm -lhiredis 

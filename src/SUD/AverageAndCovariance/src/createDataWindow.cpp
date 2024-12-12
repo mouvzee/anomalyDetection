@@ -11,8 +11,6 @@ std::vector<Data> createDataWindow(std::vector<Data> &dataVector, int wStart, in
                 dataWindow.push_back(data);
                 }
             }
-        std::cout << "datawindow ok" << std::endl; //Deb
 
-        
         return dataWindow;
 }

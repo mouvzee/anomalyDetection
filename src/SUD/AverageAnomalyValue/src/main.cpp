@@ -18,12 +18,9 @@ int main() {
         return 1;
     }
 
-    std::cout << "LETTURA DATI OK." << std::endl;
     
     // Calcolo del valore dell'anomalia
     calculateAnomaly(dataVector, averages);
-
-    std::cout << "CALCOLO ANOMALIA OK." << std::endl;
 
     // Salvataggio dati sul database
     std::int32_t key = averages.begin()->first;
@@ -33,7 +30,7 @@ int main() {
         return 1;
     }
 
-    std::cout << "SALVATAGGIO DATI OK." << std::endl;
+    std::cout << "Calcolo valore dell'anomalia sulla media completato." << std::endl;
 
     PQfinish(conn);
     return 0;

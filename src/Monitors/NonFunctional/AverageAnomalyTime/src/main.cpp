@@ -16,7 +16,7 @@ int main() {
         return 1;
     }
 
-    std::cout << "Aggiornamento dei dati completato con successo" << std::endl;
+    std::cout << "Monitor per il calcolo dell' exceededTime sulla media completato con successo." << std::endl;
     PQfinish(conn);
     return 0;
 }
