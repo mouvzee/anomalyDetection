@@ -20,7 +20,7 @@ Il sistema utilizza formule statistiche per calcolare la media e la covarianza d
   * `src/Monitors` Contiene il codice dei monitors implementati per verificare la correttezza delle funzionalità
 * `test/` Contiene i file .CSV generati per costruire grafici e produrre risultati sperimentali
 
-Per maggiori informazioni, [qui]() trovate la relazione del progetto
+Per maggiori informazioni, [qui](https://github.com/user-attachments/files/18171686/Ingegneria_del_Software.1.pdf) trovate la relazione del progetto
 
 ## Prerequisiti
 
