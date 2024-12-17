@@ -31,8 +31,6 @@ bool updateDataSQL(PGconn *conn) {
         std::string sampleTime = PQgetvalue(resSelect, i, 3);
         std::string value = PQgetvalue(resSelect, i, 2);
 
-        std::cout << "value: " << value << std::endl;
-
         // Controllo presenza dell'anomalia
         std::string isAnomaly;
         if (value == "") {

@@ -18,7 +18,7 @@
 #include <cmath>
 
 // Tempo massimo di deltaTime in millisecondi
-#define MAXTIME 3
+#define MAXTIME 1000
 
 // Funzione per calcolare il deltaTime e aggiornare la tabella
 bool updateDeltaTime(PGconn *conn);

@@ -29,10 +29,6 @@ bool readFileCSV(std::string fileName, std::vector<Data> &dataVector) {
         
     }
 
-    for (Data data : dataVector) {
-        std::cout << data.sampleTime << " " << data.sensorID << " " << data.value << std::endl;
-    }
-
     fileCSV.close();
     return true;
 }

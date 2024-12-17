@@ -19,7 +19,7 @@
 #include <cmath>
 
 // Grandezza della finestra temporale
-#define WINDOW_SIZE 2
+#define WINDOW_SIZE 16
 
 
 // Struttura per i dati letti da Redis
